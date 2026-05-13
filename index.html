@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Thomas Febry Cahyono — Software Engineer & IoT Developer</title>
+  <meta name="description" content="Final year Software Engineering student with mechanical engineering background. Specialized in web development, IoT systems, and industrial automation."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+/* ════════════════════════════════════════
+   DESIGN TOKENS — FUTURISTIC BENTO DARK
+════════════════════════════════════════ */
+:root {
+  /* Base Colors */
+  --bg-primary:   #0B0F19;
+  --bg-card:      #161B22;
+  --bg-card-hover:#1C2128;
+  --border:       #21262D;
+  --border-glow:  #30363D;
+  
+  /* Dual Accent System */
+  --accent-soft:  #10B981;  /* Software/Digital — Hijau Neon */
+  --accent-mech:  #F97316;  /* Mechanical — Orange */
+  --accent-glow:  rgba(16, 185, 129, 0.15);
+  --mech-glow:    rgba(249, 115, 22, 0.15);
+  
+  /* Typography */
+  --text-primary: #F0F6FC;
+  --text-muted:   #7D8590;
+  --text-dimmed:  #484F58;
+  
+  /* Fonts */
+  --font-base:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+  
+  /* Shadows & Effects */
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:    0 8px 24px rgba(0,0,0,0.5);
+  --shadow-glow:  0 0 20px var(--accent-glow);
+  
+  /* Animation */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --transition:   all 0.3s var(--ease-out);
+}
+
+/* ════════════════════════════════════════
+   RESET & BASE
+════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-base);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+::selection {
+  background: var(--accent-glow);
+  color: var(--text-primary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* ════════════════════════════════════════
+   CUSTOM CURSOR (Desktop Only)
+════════════════════════════════════════ */
+#cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-soft);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s, background 0.2s;
+  mix-blend-mode: screen;
+}
+
+#cursor-ring {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgba(16, 185, 129, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s var(--ease-out);
+}
+
+body:has(a:hover) #cursor-dot {
+  transform: translate(-50%, -50%) scale(2.5);
+  background: var(--accent-mech);
+}
+
+body:has(a:hover) #cursor-ring {
+  width: 42px;
+  height: 42px;
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+@media (max-width: 768px) {
+  #cursor-dot, #cursor-ring { display: none; }
+}
+
+/* ════════════════════════════════════════
+   HEADER
+════════════════════════════════════════ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 32px;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent-soft);
+}
+
+.logo span {
+  color: var(--accent-mech);
+}
+
+.header-nav {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.header-nav a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.header-nav a:hover {
+  color: var(--accent-soft);
+}
+
+/* ════════════════════════════════════════
+   MAIN CONTAINER — BENTO GRID
+════════════════════════════════════════ */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 32px 60px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ════════════════════════════════════════
+   CARD BASE
+════════════════════════════════════════ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-glow),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ════════════════════════════════════════
+   HERO CARD
+════════════════════════════════════════ */
+.hero-card {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 6px 14px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 24px;
+}
+
+.hero-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--accent-soft);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero-name {
+  font-size: clamp(42px, 5.5vw, 68px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+
+.hero-name .first {
+  display: block;
+  color: var(--text-primary);
+}
+
+.hero-name .last {
+  display: block;
+  background: linear-gradient(
+    135deg,
+    var(--accent-soft),
+    var(--accent-mech)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-title {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent-mech);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-title::before {
+  content: '>';
+  color: var(--text-dimmed);
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent-soft);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+  background: #14D99D;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-soft);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+/* ════════════════════════════════════════
+   STATS CARD
+════════════════════════════════════════ */
+.stats-card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dimmed);
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-soft);
+}
+
+.stat-value.mech {
+  color: var(--accent-mech);
+}
+
+/* ════════════════════════════════════════
+   ABOUT CARD
+════════════════════════════════════════ */
+.about-card {
+  grid-column: span 8;
+}
+
+.card-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--accent-soft);
+  border-radius: 2px;
+}
+
+.card-title.mech::before {
+  background: var(--accent-mech);
+}
+
+.card-title.mech {
+  color: var(--accent-mech);
+}
+
+.about-content p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-content em {
+  color: var(--accent-soft);
+  font-style: normal;
+}
+
+/* ════════════════════════════════════════
+   SKILLS CARD
+════════════════════════════════════════ */
+.skills-card {
+  grid-column: span 4;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.skill-badge {
+  padding: 10px 14px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent-soft);
+  transition: var(--transition);
+}
+
+.skill-badge.mech {
+  background: rgba(249, 115, 22, 0.08);
+  border-color: rgba(249, 115, 22, 0.15);
+  color: var(--accent-mech);
+}
+
+.skill-badge:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ════════════════════════════════════════
+   PROJECTS CARD
+════════════════════════════════════════ */
+.projects-card {
+  grid-column: span 12;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.project-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.project-item:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.project-cat {
+  padding: 4px 10px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.project-cat.iot {
+  background: var(--mech-glow);
+  border-color: rgba(249, 115, 22, 0.2);
+  color: var(--accent-mech);
+}
+
+.project-links {
+  display: flex;
+  gap: 6px;
+}
+
+.project-link {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  border-color: var(--accent-soft);
+  color: var(--accent-soft);
+}
+
+.project-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stack-tag {
+  padding: 3px 9px;
+  background: rgba(125, 133, 144, 0.1);
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dimmed);
+}
+
+/* ════════════════════════════════════════
+   CERTIFICATIONS CARD
+════════════════════════════════════════ */
+.certs-card {
+  grid-column: span 12;
+}
+
+.certs-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 20px 0;
+  margin-top: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.certs-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.certs-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.certs-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.cert-item {
+  min-width: 280px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.cert-item:hover {
+  border-color: var(--accent-mech);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-thumb {
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-thumb-placeholder {
+  font-size: 48px;
+  filter: grayscale(1) opacity(0.3);
+}
+
+.cert-body {
+  padding: 16px;
+}
+
+.cert-issuer {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-mech);
+  margin-bottom: 6px;
+}
+
+.cert-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.cert-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dimmed);
+}
+
+/* ════════════════════════════════════════
+   CONTACT CARD
+════════════════════════════════════════ */
+.contact-card {
+  grid-column: span 12;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.contact-item:hover {
+  border-color: var(--accent-soft);
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-glow);
+  border-radius: 8px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.contact-text .label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.contact-text .value {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dimmed);
+}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+.footer {
+  padding: 32px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  font-size: 12px;
+  color: var(--text-dimmed);
+}
+
+.footer span {
+  color: var(--accent-soft);
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-card,
+  .stats-card,
+  .about-card,
+  .skills-card {
+    grid-column: span 12;
+  }
+  
+  .bento-grid {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 20px 40px;
+  }
+  
+  .header {
+    padding: 14px 20px;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .hero-name {
+    font-size: 36px;
+  }
+  
+  .stats-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 140px;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+  }
+  
+  .stat-item:nth-child(2n) {
+    border-right: none;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .skill-badge {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ════════════════════════════════════════
+   ANIMATION UTILITIES
+════════════════════════════════════════ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s var(--ease-out) forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+.fade-in-delay-4 { animation-delay: 0.4s; }
+.fade-in-delay-5 { animation-delay: 0.5s; }
+.fade-in-delay-6 { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     CUSTOM CURSOR (Desktop Only)
+══════════════════════════════════════════ -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#hero">&lt;<span>TFC</span>/&gt;</a>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     MAIN BENTO GRID
+══════════════════════════════════════════ -->
+<main class="container">
+  <div class="bento-grid">
+    
+    <!-- HERO CARD -->
+    <div class="card hero-card fade-in" id="hero">
+      <div class="hero-status">🟢 Open to Internship</div>
+      <h1 class="hero-name">
+        <span class="first">Thomas Febry</span>
+        <span class="last">Cahyono</span>
+      </h1>
+      <p class="hero-title">Software Engineering Student &amp; IoT Developer</p>
+      <p class="hero-desc">
+        Final year student combining <strong>mechanical engineering expertise</strong> with 
+        <strong>software development skills</strong>. Specialized in web applications, 
+        IoT systems, and industrial automation.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- STATS CARD -->
+    <div class="card stats-card fade-in fade-in-delay-1">
+      <div class="stat-item">
+        <span class="stat-label">GPA</span>
+        <span class="stat-value">3.75</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Projects</span>
+        <span class="stat-value">12+</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Tech Stack</span>
+        <span class="stat-value">15+</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Background</span>
+        <span class="stat-value mech">Dual</span>
+      </div>
+    </div>
+
+    <!-- ABOUT CARD -->
+    <div class="card about-card fade-in fade-in-delay-2" id="about">
+      <h2 class="card-title">About Me</h2>
+      <div class="about-content">
+        <p>
+          Saya <strong>Thomas Febry Cahyono</strong>, mahasiswa tingkat akhir 
+          <em>Rekayasa Perangkat Lunak</em> di Universitas Bina Sarana Informatika 
+          dengan IPK <strong>3.75/4.00</strong>.
+        </p>
+        <p>
+          Latar belakang saya dimulai dari <strong>mechanical engineering</strong> — 
+          CNC machining, CAM programming, welding — sebelum transisi ke dunia software. 
+          Kombinasi unik ini memberi saya perspektif berbeda: 
+          <em>memahami sistem fisik sebelum membangun sistem digital</em>.
+        </p>
+        <p>
+          Fokus utama saya di <em>web development</em>, <em>IoT programming</em>, 
+          dan <em>industrial automation</em> — bidang yang menjembatani dunia 
+          mechanical dan software engineering.
+        </p>
+      </div>
+    </div>
+
+    <!-- SKILLS CARD -->
+    <div class="card skills-card fade-in fade-in-delay-2" id="skills">
+      <h2 class="card-title">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-badge">PHP</div>
+        <div class="skill-badge">Python</div>
+        <div class="skill-badge">JavaScript</div>
+        <div class="skill-badge">Laravel</div>
+        <div class="skill-badge">MySQL</div>
+        <div class="skill-badge">REST API</div>
+        <div class="skill-badge">Bootstrap</div>
+        <div class="skill-badge">Git</div>
+      </div>
+      <h2 class="card-title mech" style="margin-top:24px">Mechanical</h2>
+      <div class="skills-grid">
+        <div class="skill-badge mech">CNC</div>
+        <div class="skill-badge mech">CAM</div>
+        <div class="skill-badge mech">Milling</div>
+        <div class="skill-badge mech">Welding</div>
+      </div>
+    </div>
+
+    <!-- PROJECTS CARD -->
+    <div class="card projects-card fade-in fade-in-delay-3" id="projects">
+      <h2 class="card-title">Featured Projects</h2>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS CARD -->
+    <div class="card certs-card fade-in fade-in-delay-4">
+      <h2 class="card-title mech">Certifications</h2>
+      <div class="certs-scroll" id="certs-scroll">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="card contact-card fade-in fade-in-delay-5" id="contact">
+      <h2 class="card-title">Get in Touch</h2>
+      <div class="contact-grid">
+        <a href="mailto:thomasfebryc@gmail.com" class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="contact-text">
+            <div class="label">Email</div>
+            <div class="value">thomasfebryc@gmail.com</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/thomasfebryc" target="_blank" class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="contact-text">
+            <div class="label">GitHub</div>
+            <div class="value">github.com/thomasfebryc</div>
+          </div>
+        </a>
+        
+        <a href="https://wa.me/6282242443533" target="_blank" class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="contact-text">
+            <div class="label">WhatsApp</div>
+            <div class="value">+62 822 4244 3533</div>
+          </div>
+        </a>
+        
+        <a href="https://linkedin.com/in/thomasfebrycahyono" target="_blank" class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-text">
+            <div class="label">LinkedIn</div>
+            <div class="value">thomasfebrycahyono</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      Designed &amp; Built by <span>Thomas Febry Cahyono</span> 
+      &nbsp;·&nbsp; 2025
+    </p>
+  </footer>
+</main>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT — DATA & LOGIC
+══════════════════════════════════════════ -->
+<script>
+/* ═══════════════════════════════════════════
+   EDIT DATA DI SINI
+═══════════════════════════════════════════ */
+
+// PROJECTS DATA
+const PROJECTS = [
+  {
+    cat: 'iot',
+    title: 'Sistem Absensi IoT',
+    desc: 'Sistem presensi otomatis menggunakan RFID/sidik jari terhubung ke web dashboard real-time dengan export laporan Excel.',
+    stack: ['Python', 'PHP', 'MySQL', 'Bootstrap'],
+    github: 'https://github.com/thomasfebryc',
+    demo: '#'
+  },
+  {
+    cat: 'iot',
+    title: 'IoT Monitoring Dashboard',
+    desc: 'Dashboard web memantau data sensor (suhu, kelembaban) secara real-time dengan grafik dinamis dan alert threshold otomatis.',
+    stack: ['Python', 'JavaScript', 'Chart.js', 'MySQL'],
+    github: 'https://github.com/thomasfebryc',
+    demo: '#'
+  },
+  {
+    cat: 'web',
+    title: 'Sistem Informasi Akademik',
+    desc: 'Aplikasi manajemen data akademik — mahasiswa, nilai, jadwal — dengan role admin/dosen/mahasiswa dan cetak laporan PDF.',
+    stack: ['CodeIgniter', 'PHP', 'MySQL', 'Bootstrap'],
+    github: 'https://github.com/thomasfebryc',
+    demo: '#'
+  },
+  {
+    cat: 'web',
+    title: 'Manajemen Inventaris',
+    desc: 'Sistem pengelolaan stok barang dengan tracking masuk/keluar, alert stok minimum, dan export laporan Excel otomatis.',
+    stack: ['Laravel', 'MySQL', 'Bootstrap'],
+    github: 'https://github.com/thomasfebryc',
+    demo: '#'
+  },
+  {
+    cat: 'web',
+    title: 'Portfolio Website',
+    desc: 'Website portfolio ini — dibangun dengan pure HTML/CSS/JS, hosted gratis di GitHub Pages dengan desain futuristic bento-dark.',
+    stack: ['HTML5', 'CSS3', 'Vanilla JS'],
+    github: 'https://github.com/thomasfebryc',
+    demo: 'https://thomasfebryc.github.io'
+  },
+  {
+    cat: 'mobile',
+    title: 'Mobile Task Manager',
+    desc: 'Aplikasi manajemen tugas mobile dengan backend REST API Laravel, JWT authentication, dan push notification pengingat deadline.',
+    stack: ['Mobile Dev', 'Laravel API', 'JWT', 'MySQL'],
+    github: 'https://github.com/thomasfebryc',
+    demo: '#'
+  }
+];
+
+// CERTIFICATIONS DATA
+const CERTS = [
+  // Contoh format:
+  // {
+  //   issuer: 'Dicoding Indonesia',
+  //   name: 'Belajar Dasar Pemrograman Web',
+  //   date: 'Maret 2024',
+  //   image: 'certs/dicoding-web.jpg',
+  //   credential: 'https://dicoding.com/certificates/xxx'
+  // }
+];
+
+/* ═══════════════════════════════════════════
+   JANGAN EDIT DI BAWAH INI (render logic)
+═══════════════════════════════════════════ */
+
+// ── CURSOR TRACKING (Desktop Only) ──
+if (window.innerWidth > 768) {
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate() {
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+    
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+    
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+// ── RENDER PROJECTS ──
+function renderProjects() {
+  const grid = document.getElementById('projects-grid');
+  grid.innerHTML = '';
+  
+  PROJECTS.forEach(project => {
+    const card = document.createElement('div');
+    card.className = 'project-item';
+    
+    const catClass = project.cat === 'iot' ? 'iot' : '';
+    const catLabel = project.cat === 'iot' ? 'IoT' : 
+                     project.cat === 'mobile' ? 'Mobile' : 'Web';
+    
+    card.innerHTML = `
+      <div class="project-header">
+        <span class="project-cat ${catClass}">${catLabel}</span>
+        <div class="project-links">
+          ${project.github && project.github !== '#' ? 
+            `<a href="${project.github}" target="_blank" class="project-link">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>` : ''}
+          ${project.demo && project.demo !== '#' ? 
+            `<a href="${project.demo}" target="_blank" class="project-link">↗</a>` : ''}
+        </div>
+      </div>
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-desc">${project.desc}</p>
+      <div class="project-stack">
+        ${project.stack.map(tag => `<span class="stack-tag">${tag}</span>`).join('')}
+      </div>
+    `;
+    
+    grid.appendChild(card);
+  });
+}
+
+// ── RENDER CERTIFICATIONS ──
+function renderCerts() {
+  const scroll = document.getElementById('certs-scroll');
+  scroll.innerHTML = '';
+  
+  if (CERTS.length === 0) {
+    scroll.innerHTML = `
+      <div style="width:100%;padding:40px;text-align:center;color:var(--text-dimmed);font-size:13px">
+        <p>Tambahkan sertifikat Anda dengan mengisi array <code style="color:var(--accent-soft);background:rgba(16,185,129,0.1);padding:2px 6px;border-radius:4px">CERTS</code> di bagian JavaScript.</p>
+        <p style="margin-top:8px;font-size:11px">Format: {issuer, name, date, image, credential}</p>
+      </div>
+    `;
+    return;
+  }
+  
+  CERTS.forEach(cert => {
+    const card = document.createElement('div');
+    card.className = 'cert-item';
+    
+    const hasImage = cert.image && cert.image.trim() !== '';
+    
+    card.innerHTML = `
+      <div class="cert-thumb">
+        ${hasImage ? 
+          `<img src="${cert.image}" alt="${cert.name}" loading="lazy">` :
+          `<span class="cert-thumb-placeholder">🎓</span>`
+        }
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer">${cert.issuer}</div>
+        <div class="cert-name">${cert.name}</div>
+        <div class="cert-date">${cert.date}</div>
+      </div>
+    `;
+    
+    if (cert.credential) {
+      card.style.cursor = 'pointer';
+      card.onclick = () => window.open(cert.credential, '_blank');
+    }
+    
+    scroll.appendChild(card);
+  });
+}
+
+// ── INITIALIZE ──
+document.addEventListener('DOMContentLoaded', () => {
+  renderProjects();
+  renderCerts();
+});
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
