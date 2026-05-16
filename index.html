@@ -471,6 +471,56 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 /* ════════════════════════════════════════
    SKILLS
 ════════════════════════════════════════ */
+
+/* Logo showcase */
+.tech-logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.tech-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 14px;
+  min-width: 88px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  cursor: default;
+}
+
+.tech-logo-item:hover {
+  border-color: var(--border-light);
+  background: var(--surface-hi);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.tech-logo-item img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.tech-logo-item span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.tech-logo-item:hover span {
+  color: var(--text);
+}
+
 .skills-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1142,6 +1192,66 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
   <section class="section" id="skills">
     <div class="section-label">Technical Skills</div>
     <h2 class="section-title">Tech Stack</h2>
+
+    <!-- Logo Showcase -->
+    <div class="tech-logos-grid">
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg" alt="PHP"/>
+        <span>PHP</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"/>
+        <span>Python</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+        <span>JavaScript</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel"/>
+        <span>Laravel</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"/>
+        <span>CodeIgniter</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"/>
+        <span>MySQL</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"/>
+        <span>HTML5</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/>
+        <span>CSS3</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"/>
+        <span>Bootstrap</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/>
+        <span>Git</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" alt="Arduino"/>
+        <span>Arduino</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi"/>
+        <span>Raspberry Pi</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
+        <span>GitHub</span>
+      </div>
+      <div class="tech-logo-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"/>
+        <span>Linux</span>
+      </div>
+    </div>
 
     <div class="skills-layout">
       <div>
