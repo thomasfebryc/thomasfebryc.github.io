@@ -810,15 +810,20 @@ function initCanvas() {
   function draw() {
     ctx.clearRect(0,0,W,H);
     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const dotColor = isDark ? '76,110,245' : '59,91,219';
-    const lineColor = isDark ? '76,110,245' : '59,91,219';
+
+    // Warna & opacity disesuaikan per tema agar kontras terhadap background tetap setara
+    const dotColor         = isDark ? '76,110,245' : '47,76,191';   // lebih gelap & saturated di light mode
+    const lineColor        = isDark ? '76,110,245' : '47,76,191';
+    const dotOpacityMult   = isDark ? 0.6  : 0.85;                  // naikkan opacity titik di light mode
+    const lineOpacityMult  = isDark ? 0.12 : 0.22;                  // naikkan opacity garis di light mode
+
     particles.forEach(p => {
       p.x += p.vx; p.y += p.vy;
       if (p.x<0) p.x=W; if (p.x>W) p.x=0;
       if (p.y<0) p.y=H; if (p.y>H) p.y=0;
       ctx.beginPath();
       ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(${dotColor},${p.a*.6})`;
+      ctx.fillStyle=`rgba(${dotColor},${p.a*dotOpacityMult})`;
       ctx.fill();
     });
     for (let i=0;i<particles.length;i++) {
@@ -829,7 +834,7 @@ function initCanvas() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x,particles[i].y);
           ctx.lineTo(particles[j].x,particles[j].y);
-          ctx.strokeStyle=`rgba(${lineColor},${(1-dist/130)*.12})`;
+          ctx.strokeStyle=`rgba(${lineColor},${(1-dist/130)*lineOpacityMult})`;
           ctx.lineWidth=.6;
           ctx.stroke();
         }
