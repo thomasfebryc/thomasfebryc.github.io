@@ -143,6 +143,26 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 .fact-val.accent{color:var(--accent);}
 .fact-val.warm{color:var(--accent-warm);}
 
+/* ── EXPERIENCE ── */
+.timeline{position:relative;display:flex;flex-direction:column;gap:0;}
+.timeline::before{content:'';position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--accent),var(--border) 90%);}
+.timeline-item{position:relative;display:grid;grid-template-columns:40px 1fr;gap:24px;padding-bottom:40px;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-dot{position:relative;width:40px;height:40px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;color:var(--accent);}
+.timeline-item.past .timeline-dot{border-color:var(--accent-warm);color:var(--accent-warm);}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:22px 24px;transition:var(--transition);}
+.timeline-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.timeline-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px;}
+.timeline-role{font-size:16px;font-weight:700;color:var(--text);}
+.timeline-period{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--accent);white-space:nowrap;}
+.timeline-item.past .timeline-period{color:var(--accent-warm);}
+.timeline-company{font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:4px;}
+.timeline-location{font-size:11px;color:var(--text-dim);margin-bottom:12px;font-family:var(--font-mono);}
+.timeline-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.timeline-list li{font-size:13px;line-height:1.6;color:var(--text-muted);padding-left:16px;position:relative;}
+.timeline-list li::before{content:'▸';position:absolute;left:0;color:var(--accent);}
+.timeline-item.past .timeline-list li::before{color:var(--accent-warm);}
+
 /* ── SKILLS ── */
 .tech-logos-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;}
 .tech-logo-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px 14px;min-width:88px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);transition:var(--transition);cursor:default;position:relative;overflow:hidden;}
@@ -268,6 +288,9 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
   .hero-stats{flex-wrap:wrap;gap:20px;}
   .contact-grid{grid-template-columns:1fr 1fr;}
   .section-title{font-size:26px;}
+  .timeline-item{grid-template-columns:28px 1fr;gap:14px;}
+  .timeline-dot{width:28px;height:28px;}
+  .timeline::before{left:13px;}
 }
 @media(max-width:480px){
   .hero-actions{flex-direction:column;}
@@ -287,6 +310,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 <!-- Mobile nav -->
 <nav class="mobile-nav" id="mobile-nav">
   <a href="#about" data-i18n="nav_about">About</a>
+  <a href="#experience" data-i18n="nav_experience">Experience</a>
   <a href="#skills" data-i18n="nav_skills">Skills</a>
   <a href="#projects" data-i18n="nav_projects">Projects</a>
   <a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -298,6 +322,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
     <nav>
       <ul class="header-nav">
         <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
         <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
         <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
@@ -326,7 +351,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
     <div class="hero-content">
       <div class="hero-badge fade-up d1">
         <span class="hero-badge-dot"></span>
-        <span data-i18n="hero_badge">Open to Internship</span>
+        <span data-i18n="hero_badge">Junior Software Engineer @ PT Tentakel Integrasi Indonesia</span>
       </div>
       <h1 class="hero-name fade-up d2">
         <span class="line1">Thomas Febry</span>
@@ -336,9 +361,11 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <span id="typewriter"></span><span class="typewriter-cursor"></span>
       </p>
       <p class="hero-desc fade-up d4" data-i18n="hero_desc">
-        Final-year <strong>Software Engineering</strong> student with a background in
-        <strong>mechanical engineering</strong>. Passionate about building modern,
-        efficient web applications and IoT systems that solve real-world problems.
+        <strong>Junior Software Engineer</strong> with ~5 years of combined experience across
+        full-stack web development and IoT integration, currently finishing my final year in
+        <strong>Software Engineering</strong>. Grounded by a background in <strong>mechanical
+        engineering</strong>, I focus on building clean, maintainable systems that solve real
+        operational problems.
       </p>
       <div class="hero-actions fade-up d5">
         <a href="#projects" class="btn btn-primary">
@@ -346,7 +373,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
           <span data-i18n="btn_projects">View Projects</span>
         </a>
         <a href="#contact" class="btn btn-outline"><span data-i18n="btn_contact">Get in Touch</span></a>
-        <a href="assets/cv-thomas-febry.pdf" target="_blank" class="btn btn-outline">
+        <a href="docs/CV_Thomas_Febry_Cahyono.pdf" target="_blank" class="btn btn-outline">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span data-i18n="btn_cv">Download CV</span>
         </a>
@@ -365,8 +392,8 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
           <div class="hero-stat-label" data-i18n="stat_stack">Tech Stack</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num warm" data-count="2" data-suffix="">2</div>
-          <div class="hero-stat-label" data-i18n="stat_bg">Backgrounds</div>
+          <div class="hero-stat-num warm" data-count="5" data-suffix="+">5+</div>
+          <div class="hero-stat-label" data-i18n="stat_bg">Years Experience</div>
         </div>
       </div>
     </div>
@@ -384,7 +411,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
       </div>
       <div class="hero-photo-accent">
         <span class="dot-green"></span>
-        <span data-i18n="available">Available for hire</span>
+        <span data-i18n="available">Open to new opportunities</span>
       </div>
     </div>
   </section>
@@ -397,9 +424,9 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
     <h2 class="section-title reveal reveal-delay-1" data-i18n="title_about">Who I Am</h2>
     <div class="about-grid">
       <div class="about-text reveal left reveal-delay-2">
-        <p data-i18n="about_p1">I'm <strong>Thomas Febry Cahyono</strong>, a final-year <em>Software Engineering</em> student at Universitas Bina Sarana Informatika, maintaining a <strong>3.75 / 4.00 GPA</strong>.</p>
+        <p data-i18n="about_p1">I'm <strong>Thomas Febry Cahyono</strong>, a final-year <em>Software Engineering</em> student at Universitas Bina Sarana Informatika, maintaining a <strong>3.75 / 4.00 GPA</strong>, and currently working as a <strong>Junior Software Engineer</strong> at PT Tentakel Integrasi Indonesia.</p>
         <p data-i18n="about_p2">Before transitioning into software development, I built a foundation in <strong>mechanical engineering</strong> — spanning CNC machining, CAM programming, and welding. That background instilled a systematic, precision-driven approach to problem-solving that I carry into every line of code I write.</p>
-        <p data-i18n="about_p3">Today I focus on crafting <em>web applications</em> and <em>Internet of Things (IoT)</em> systems. I'm driven by the challenge of turning complex requirements into clean, maintainable solutions that make a genuine difference for the people who use them.</p>
+        <p data-i18n="about_p3">Today I focus on crafting <em>web applications</em> and <em>Internet of Things (IoT)</em> systems, connecting devices like ESP32, Arduino, and Raspberry Pi to larger platforms. I enjoy debugging more than most people — tracing the root cause of a problem rather than patching the visible symptom — and I lead with a "wake up, speak up, stand up" culture, where issues get raised early instead of bottled up until the deadline is looming.</p>
       </div>
       <div class="about-facts reveal right reveal-delay-3">
         <div class="fact-item"><span class="fact-key" data-i18n="fact_uni">University</span><span class="fact-val">Univ. Bina Sarana Informatika</span></div>
@@ -407,7 +434,62 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <div class="fact-item"><span class="fact-key">GPA</span><span class="fact-val accent">3.75 / 4.00</span></div>
         <div class="fact-item"><span class="fact-key" data-i18n="fact_year">Year</span><span class="fact-val warm" data-i18n="fact_year_val">Final Year</span></div>
         <div class="fact-item"><span class="fact-key" data-i18n="fact_loc">Location</span><span class="fact-val">Depok, West Java, Indonesia</span></div>
-        <div class="fact-item"><span class="fact-key" data-i18n="fact_avail">Availability</span><span class="fact-val accent" data-i18n="fact_avail_val">Internship / Part-time</span></div>
+        <div class="fact-item"><span class="fact-key" data-i18n="fact_avail">Status</span><span class="fact-val accent" data-i18n="fact_avail_val">Employed · Open to New Roles</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+<!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-label reveal" data-i18n="label_experience">Experience</div>
+    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_experience">Where I've Worked</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal left reveal-delay-1">
+        <div class="timeline-dot">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role" data-i18n="exp1_role">Junior Software Engineer</span>
+            <span class="timeline-period" data-i18n="exp1_period">Feb 2024 — Present</span>
+          </div>
+          <div class="timeline-company">
+            <a href="https://www.tentakelintegrasi.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); padding-bottom: 2px;">
+              PT Tentakel Integrasi Indonesia
+            </a>
+          </div>
+          <div class="timeline-location" data-i18n="exp1_location">Jakarta Raya, Indonesia</div>
+          <ul class="timeline-list">
+            <li data-i18n="exp1_b1">Developed and maintained responsive, scalable custom web applications using Laravel and CodeIgniter 4.</li>
+            <li data-i18n="exp1_b2">Supported IoT and automation hardware integration into existing client infrastructure without disrupting live systems.</li>
+            <li data-i18n="exp1_b3">Collaborated on clean-code practices while bridging hardware devices with software interfaces.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item past reveal left reveal-delay-2">
+        <div class="timeline-dot">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.77z"/></svg>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role" data-i18n="exp2_role">Mechanical Engineering Technician</span>
+            <span class="timeline-period" data-i18n="exp2_period">Mar 2019 — Feb 2022</span>
+          </div>
+          <div class="timeline-company">
+            <a href="https://bp-agri.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-warm); text-decoration: none; border-bottom: 1px dashed var(--accent-warm); padding-bottom: 2px;">
+              PT. Bukit Palem
+            </a>
+          </div>
+          <div class="timeline-location" data-i18n="exp2_location">Singkup, Indonesia</div>
+          <ul class="timeline-list">
+            <li data-i18n="exp2_b1">Independently produced technical drawings and blueprints for new production tooling and modifications.</li>
+            <li data-i18n="exp2_b2">Executed designs into finished parts through metal fabrication, welding, and manual lathe/milling operation.</li>
+            <li data-i18n="exp2_b3">Ran troubleshooting and routine maintenance on core production machinery to minimize downtime.</li>
+            <li data-i18n="exp2_b4">Ensured all tooling and mechanical processes complied with industrial K3 (health & safety) standards.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -447,7 +529,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         </div>
         <div class="skill-group" style="margin-top:28px">
           <div class="skill-group-title" data-i18n="sg_iot">IoT &amp; Embedded Systems</div>
-          <div class="skill-tags"><span class="skill-tag">Arduino</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">RFID</span><span class="skill-tag">MQTT</span><span class="skill-tag">Sensor Integration</span></div>
+          <div class="skill-tags"><span class="skill-tag">Arduino</span><span class="skill-tag">ESP32</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">RFID</span><span class="skill-tag">MQTT</span><span class="skill-tag">Sensor Integration</span></div>
         </div>
       </div>
       <div class="reveal right reveal-delay-3">
@@ -488,9 +570,9 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
     <div class="section-label reveal" data-i18n="label_contact">Contact</div>
     <h2 class="section-title reveal reveal-delay-1" data-i18n="title_contact">Let's Connect</h2>
     <div class="contact-grid">
-      <a href="mailto:thomasfebryc@gmail.com" class="contact-card reveal reveal-delay-1">
+      <a href="mailto:Febry.thomas.98@gmail.com" class="contact-card reveal reveal-delay-1">
         <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div class="contact-info"><div class="contact-label">Email</div><div class="contact-val">thomasfebryc@gmail.com</div></div>
+        <div class="contact-info"><div class="contact-label">Email</div><div class="contact-val">Febry.thomas.98@gmail.com</div></div>
       </a>
       <a href="https://github.com/thomasfebryc" target="_blank" class="contact-card reveal reveal-delay-2">
         <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
@@ -500,7 +582,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
         <div class="contact-info"><div class="contact-label">WhatsApp</div><div class="contact-val">+62 822-4244-3533</div></div>
       </a>
-      <a href="https://linkedin.com/in/thomas-febry-c-0091291a3" target="_blank" class="contact-card reveal reveal-delay-4">
+      <a href="https://linkedin.com/in/thomas-febrycahyono-0091291a3" target="_blank" class="contact-card reveal reveal-delay-4">
         <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
         <div class="contact-info"><div class="contact-label">LinkedIn</div><div class="contact-val">Thomas Febry Cahyono</div></div>
       </a>
@@ -516,20 +598,30 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 /* ═══════════ i18n DICTIONARY ═══════════ */
 const I18N = {
   en: {
-    nav_about:'About', nav_skills:'Skills', nav_projects:'Projects', nav_contact:'Contact',
-    hero_badge:'Open to Internship',
-    hero_desc:'Final-year <strong>Software Engineering</strong> student with a background in <strong>mechanical engineering</strong>. Passionate about building modern, efficient web applications and IoT systems that solve real-world problems.',
+    nav_about:'About', nav_experience:'Experience', nav_skills:'Skills', nav_projects:'Projects', nav_contact:'Contact',
+    hero_badge:'Junior Software Engineer @ PT Tentakel Integrasi Indonesia',
+    hero_desc:'<strong>Junior Software Engineer</strong> with ~5 years of combined experience across full-stack web development and IoT integration, currently finishing my final year in <strong>Software Engineering</strong>. Grounded by a background in <strong>mechanical engineering</strong>, I focus on building clean, maintainable systems that solve real operational problems.',
     hero_role:'Software Engineer & IoT Developer',
     btn_projects:'View Projects', btn_contact:'Get in Touch', btn_cv:'Download CV',
-    stat_projects:'Projects', stat_stack:'Tech Stack', stat_bg:'Backgrounds',
-    available:'Available for hire',
+    stat_projects:'Projects', stat_stack:'Tech Stack', stat_bg:'Years Experience',
+    available:'Open to new opportunities',
     label_about:'About Me', title_about:'Who I Am',
-    about_p1:'I\'m <strong>Thomas Febry Cahyono</strong>, a final-year <em>Software Engineering</em> student at Universitas Bina Sarana Informatika, maintaining a <strong>3.75 / 4.00 GPA</strong>.',
+    about_p1:'I\'m <strong>Thomas Febry Cahyono</strong>, a final-year <em>Software Engineering</em> student at Universitas Bina Sarana Informatika, maintaining a <strong>3.75 / 4.00 GPA</strong>, and currently working as a <strong>Junior Software Engineer</strong> at PT Tentakel Integrasi Indonesia.',
     about_p2:'Before transitioning into software development, I built a foundation in <strong>mechanical engineering</strong> — spanning CNC machining, CAM programming, and welding. That background instilled a systematic, precision-driven approach to problem-solving that I carry into every line of code I write.',
-    about_p3:'Today I focus on crafting <em>web applications</em> and <em>Internet of Things (IoT)</em> systems. I\'m driven by the challenge of turning complex requirements into clean, maintainable solutions that make a genuine difference for the people who use them.',
+    about_p3:'Today I focus on crafting <em>web applications</em> and <em>Internet of Things (IoT)</em> systems, connecting devices like ESP32, Arduino, and Raspberry Pi to larger platforms. I enjoy debugging more than most people — tracing the root cause of a problem rather than patching the visible symptom — and I lead with a "wake up, speak up, stand up" culture, where issues get raised early instead of bottled up until the deadline is looming.',
     fact_uni:'University', fact_major:'Major', fact_major_val:'Software Engineering',
     fact_year:'Year', fact_year_val:'Final Year',
-    fact_loc:'Location', fact_avail:'Availability', fact_avail_val:'Internship / Part-time',
+    fact_loc:'Location', fact_avail:'Status', fact_avail_val:'Employed · Open to New Roles',
+    label_experience:'Experience', title_experience:"Where I've Worked",
+    exp1_role:'Junior Software Engineer', exp1_period:'Feb 2024 — Present', exp1_location:'Jakarta Raya, Indonesia',
+    exp1_b1:'Developed and maintained responsive, scalable custom web applications using Laravel and CodeIgniter 4.',
+    exp1_b2:'Supported IoT and automation hardware integration into existing client infrastructure without disrupting live systems.',
+    exp1_b3:'Collaborated on clean-code practices while bridging hardware devices with software interfaces.',
+    exp2_role:'Mechanical Engineering Technician', exp2_period:'Mar 2019 — Feb 2022', exp2_location:'Singkup, Indonesia',
+    exp2_b1:'Independently produced technical drawings and blueprints for new production tooling and modifications.',
+    exp2_b2:'Executed designs into finished parts through metal fabrication, welding, and manual lathe/milling operation.',
+    exp2_b3:'Ran troubleshooting and routine maintenance on core production machinery to minimize downtime.',
+    exp2_b4:'Ensured all tooling and mechanical processes complied with industrial K3 (health & safety) standards.',
     label_skills:'Technical Skills',
     sg_backend:'Backend & Database', sg_frontend:'Frontend & Tooling',
     sg_iot:'IoT & Embedded Systems', sg_mech:'Mechanical Engineering', sg_soft:'Soft Skills',
@@ -544,20 +636,30 @@ const I18N = {
     certs_fmt:'Format: {issuer, name, date, image, credential}'
   },
   id: {
-    nav_about:'Tentang', nav_skills:'Keahlian', nav_projects:'Proyek', nav_contact:'Kontak',
-    hero_badge:'Terbuka untuk Magang',
-    hero_desc:'Mahasiswa tingkat akhir <strong>Rekayasa Perangkat Lunak</strong> dengan latar belakang <strong>teknik mesin</strong>. Bersemangat membangun aplikasi web modern, efisien, dan sistem IoT yang memecahkan masalah nyata.',
+    nav_about:'Tentang', nav_experience:'Pengalaman', nav_skills:'Keahlian', nav_projects:'Proyek', nav_contact:'Kontak',
+    hero_badge:'Junior Software Engineer @ PT Tentakel Integrasi Indonesia',
+    hero_desc:'<strong>Junior Software Engineer</strong> dengan pengalaman gabungan ~5 tahun di pengembangan web full-stack dan integrasi IoT, saat ini menyelesaikan tahun akhir <strong>Rekayasa Perangkat Lunak</strong>. Dibekali latar belakang <strong>teknik mesin</strong>, saya fokus membangun sistem yang bersih dan mudah dipelihara untuk memecahkan masalah operasional nyata.',
     hero_role:'Software Engineer & IoT Developer',
     btn_projects:'Lihat Proyek', btn_contact:'Hubungi Saya', btn_cv:'Unduh CV',
-    stat_projects:'Proyek', stat_stack:'Tech Stack', stat_bg:'Latar Belakang',
-    available:'Tersedia untuk bekerja',
+    stat_projects:'Proyek', stat_stack:'Tech Stack', stat_bg:'Tahun Pengalaman',
+    available:'Terbuka untuk peluang baru',
     label_about:'Tentang Saya', title_about:'Siapa Saya',
-    about_p1:'Saya <strong>Thomas Febry Cahyono</strong>, mahasiswa tingkat akhir <em>Rekayasa Perangkat Lunak</em> di Universitas Bina Sarana Informatika dengan IPK <strong>3,75 / 4,00</strong>.',
+    about_p1:'Saya <strong>Thomas Febry Cahyono</strong>, mahasiswa tingkat akhir <em>Rekayasa Perangkat Lunak</em> di Universitas Bina Sarana Informatika dengan IPK <strong>3,75 / 4,00</strong>, dan saat ini bekerja sebagai <strong>Junior Software Engineer</strong> di PT Tentakel Integrasi Indonesia.',
     about_p2:'Sebelum beralih ke pengembangan perangkat lunak, saya memiliki fondasi di bidang <strong>teknik mesin</strong> — mencakup CNC machining, CAM programming, dan pengelasan. Latar belakang itu menanamkan pendekatan sistematis berbasis presisi dalam memecahkan masalah yang saya bawa ke setiap baris kode.',
-    about_p3:'Saat ini saya berfokus pada pengembangan <em>aplikasi web</em> dan sistem <em>Internet of Things (IoT)</em>. Saya terdorong oleh tantangan mengubah kebutuhan kompleks menjadi solusi bersih dan mudah dipelihara yang memberikan dampak nyata.',
+    about_p3:'Saat ini saya berfokus pada pengembangan <em>aplikasi web</em> dan sistem <em>Internet of Things (IoT)</em>, menghubungkan perangkat seperti ESP32, Arduino, dan Raspberry Pi ke platform yang lebih besar. Saya lebih senang debugging dibanding kebanyakan orang — menelusuri akar masalah, bukan sekadar menambal gejala yang tampak — dan saya memimpin dengan budaya "wake up, speak up, stand up", di mana kendala disampaikan lebih awal, bukan dipendam sampai deadline mepet.',
     fact_uni:'Universitas', fact_major:'Program Studi', fact_major_val:'Rekayasa Perangkat Lunak',
     fact_year:'Tahun', fact_year_val:'Tingkat Akhir',
-    fact_loc:'Lokasi', fact_avail:'Ketersediaan', fact_avail_val:'Magang / Part-time',
+    fact_loc:'Lokasi', fact_avail:'Status', fact_avail_val:'Bekerja · Terbuka untuk Peran Baru',
+    label_experience:'Pengalaman', title_experience:'Riwayat Kerja',
+    exp1_role:'Junior Software Engineer', exp1_period:'Feb 2024 — Sekarang', exp1_location:'Jakarta Raya, Indonesia',
+    exp1_b1:'Mengembangkan dan memelihara aplikasi web custom yang responsif dan terukur menggunakan Laravel dan CodeIgniter 4.',
+    exp1_b2:'Mendukung integrasi perangkat keras IoT/otomasi ke infrastruktur klien tanpa merombak sistem yang sedang berjalan.',
+    exp1_b3:'Berkolaborasi menyusun kode yang rapi (clean code) sembari menjembatani perangkat keras dengan antarmuka perangkat lunak.',
+    exp2_role:'Mechanical Engineering Technician', exp2_period:'Mar 2019 — Feb 2022', exp2_location:'Singkup, Indonesia',
+    exp2_b1:'Membuat gambar kerja teknis (desain/blueprint) secara mandiri untuk perencanaan proyek pembuatan dan modifikasi alat produksi baru.',
+    exp2_b2:'Mengeksekusi rancangan desain menjadi produk nyata melalui fabrikasi logam, pengelasan, dan pengoperasian mesin bubut/milling manual.',
+    exp2_b3:'Melakukan troubleshooting dan pemeliharaan rutin pada mesin produksi utama untuk meminimalisir downtime.',
+    exp2_b4:'Memastikan seluruh perancangan alat dan proses mekanikal mematuhi standar K3 di lingkungan industri.',
     label_skills:'Keahlian Teknis',
     sg_backend:'Backend & Database', sg_frontend:'Frontend & Alat',
     sg_iot:'IoT & Sistem Tertanam', sg_mech:'Teknik Mesin', sg_soft:'Soft Skill',
@@ -576,8 +678,8 @@ const I18N = {
 /* ═══════════ PROJECTS DATA ═══════════ */
 const PROJECTS = [
   { cat:'web', title:'SIM PLC', descKey:'proj_simpl_desc', stack:['CodeIgniter 4','PHP 8.1','MySQL','Tailwind CSS'], image:'assets/projects/Simplc.png', github:'#', demo:'https://plcui.com/' },
-  { cat:'web', title:'ConexPro', descKey:'proj_conexpr_desc', stack:['Laravel 11','PHP 8.2','MySQL','Tailwind CSS'], image:'assets/projects/Aconex.png', github:'https://github.com/thomasfebryc', demo:'#' },
-  { cat:'web', title:'Electra', descKey:'proj_electra_desc', stack:['Laravel 9','PHP 8.1','MySQL','Blade'], image:'assets/projects/Electra.png', github:'https://github.com/thomasfebryc', demo:'#' }
+  { cat:'web', title:'ConexPro', descKey:'proj_conexpr_desc', stack:['Laravel 11','PHP 8.2','MySQL','Tailwind CSS'], image:'assets/projects/Aconex.png', github:'https://github.com/thomasfebryc/ConexPro', demo:'#' },
+  { cat:'web', title:'Electra', descKey:'proj_electra_desc', stack:['Laravel 9','PHP 8.1','MySQL','Blade'], image:'assets/projects/Electra.png', github:'https://github.com/thomasfebryc/eLECTRA', demo:'#' }
 ];
 const CERTS = [
   { issuer:'BNSP · LSP Universitas Bina Sarana Informatika', name:'Analis Program (Program Analyst)', date:'15 September 2025', credential:'assets/certs/Analis_Program.pdf' },
