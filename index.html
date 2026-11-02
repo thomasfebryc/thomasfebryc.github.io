@@ -3,310 +3,320 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Thomas Febry Cahyono - Software Engineer & IoT Developer</title>
-<meta name="description" content="Final year Software Engineering student with mechanical engineering background. Specialized in web development, IoT systems, and industrial automation."/>
+<title>Thomas Febry Cahyono - Software Engineer, Web Developer &amp; IoT Specialist</title>
+<meta name="description" content="Portfolio of Thomas Febry Cahyono, a Software Engineer, Full-Stack Web Developer, and IoT Specialist combining mechanical engineering precision with scalable web architectures and real-world operational solutions."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<!-- Saran: Tambahkan favicon Anda di sini nanti -->
-<!-- <link rel="icon" type="image/png" href="assets/favicon.png" /> -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
+/* ── PALET WARNA ARGON DESIGN SYSTEM ── */
 :root {
-  --bg:#0C0E16;--surface:#131721;--surface-hi:#191D2C;
-  --border:#232840;--border-light:#2C3250;
-  --accent:#4C6EF5;--accent-warm:#E8A446;
-  --accent-glow:rgba(76,110,245,.10);--warm-glow:rgba(232,164,70,.10);
-  --accent-hover:#6283FF;
-  --text:#E0E4F2;--text-muted:#8892AA;--text-dim:#4A5272;
-  --font-base:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-mono:'JetBrains Mono','Courier New',monospace;
-  --radius-sm:8px;--radius-md:12px;--radius-lg:16px;
-  --shadow-sm:0 2px 8px rgba(0,0,0,.35);
-  --shadow-md:0 8px 28px rgba(0,0,0,.45);
-  --shadow-lg:0 20px 60px rgba(0,0,0,.55);
-  --ease:cubic-bezier(.22,1,.36,1);
-  --transition:all .25s var(--ease);
+  --bg: #0B1021; /* Argon Deep Night */
+  --surface: #11182E;
+  --surface-hi: #172242;
+  --border: #1E2B52;
+  --border-light: #2A3B6E;
+  
+  /* Argon Core Brand Colors */
+  --accent: #5E72E4;         /* Argon Indigo Primary */
+  --accent-cyan: #11CDEF;    /* Argon Cyan / Info */
+  --accent-warm: #FB6340;    /* Argon Orange-Coral Accent */
+  --accent-green: #2DCE89;   /* Argon Emerald Success */
+  
+  --accent-glow: rgba(94, 114, 228, 0.14);
+  --warm-glow: rgba(251, 99, 64, 0.14);
+  --accent-hover: #4B63DE;
+  
+  --text: #F4F5F7;
+  --text-muted: #8898AA;
+  --text-dim: #525F7F;
+  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 4px 6px rgba(50, 50, 93, 0.2);
+  --shadow-md: 0 8px 24px rgba(50, 50, 93, 0.3);
+  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.45);
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --transition: all .25s var(--ease);
 }
-[data-theme="light"] {
-  --bg:#F4F6FB;--surface:#FFF;--surface-hi:#EDF0F8;
-  --border:#DDE1EE;--border-light:#C6CCDF;
-  --accent:#3B5BDB;--accent-warm:#C97B10;
-  --accent-glow:rgba(59,91,219,.08);--warm-glow:rgba(201,123,16,.08);
-  --accent-hover:#2F4CBF;
-  --text:#1A1D2E;--text-muted:#52597A;--text-dim:#9BA3BC;
-  --shadow-sm:0 2px 8px rgba(0,0,0,.07);
-  --shadow-md:0 8px 28px rgba(0,0,0,.10);
-  --shadow-lg:0 20px 60px rgba(0,0,0,.12);
-}
-[data-theme="light"] .header{background:rgba(244,246,251,.92);}
-[data-theme="light"] .github-icon{filter:invert(0)!important;opacity:.75;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;overflow-x:hidden;}
-body{background:var(--bg);color:var(--text);font-family:var(--font-base);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;}
-img{display:block;max-width:100%;height:auto;}
-a{text-decoration:none;color:inherit;transition:var(--transition);}
-::-webkit-scrollbar{width:6px;}
-::-webkit-scrollbar-track{background:var(--bg);}
-::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
 
-/* ── ANIMATED BACKGROUND CANVAS ── */
-#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.35;}
+[data-theme="light"] {
+  --bg: #F8F9FE; /* Argon Soft Light */
+  --surface: #FFFFFF;
+  --surface-hi: #EDF2F9;
+  --border: #E9ECEF;
+  --border-light: #DFE4EA;
+  
+  --accent: #5E72E4;
+  --accent-cyan: #11CDEF;
+  --accent-warm: #F5365C;    /* Argon Vibrant Crimson/Coral */
+  --accent-green: #2DCE89;
+  
+  --accent-glow: rgba(94, 114, 228, 0.08);
+  --warm-glow: rgba(245, 54, 92, 0.08);
+  --accent-hover: #485EC4;
+  
+  --text: #32325D;
+  --text-muted: #525F7F;
+  --text-dim: #8898AA;
+  --shadow-sm: 0 4px 6px rgba(50, 50, 93, 0.07);
+  --shadow-md: 0 8px 24px rgba(50, 50, 93, 0.1);
+  --shadow-lg: 0 15px 35px rgba(50, 50, 93, 0.12);
+}
+
+[data-theme="light"] .header { background: rgba(248, 249, 254, 0.92); }
+[data-theme="light"] .github-icon { filter: invert(0) !important; opacity: .75; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-base); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+#bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: .35; }
 
 /* ── HEADER ── */
-.header{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;background:rgba(12,14,22,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-[data-theme="light"] .header{background:rgba(244,246,251,.92);}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:100%;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:var(--font-mono);font-size:14px;font-weight:600;color:var(--text);letter-spacing:.04em;}
-.logo .accent{color:var(--accent);}
-.logo .warm{color:var(--accent-warm);}
-.header-nav{display:flex;gap:32px;list-style:none;}
-.header-nav a{font-size:13px;font-weight:500;color:var(--text-muted);letter-spacing:.02em;transition:color .2s;}
-.header-nav a:hover{color:var(--text);}
-.header-controls{display:flex;align-items:center;gap:8px;}
-.ctrl-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text-muted);transition:var(--transition);flex-shrink:0;font-family:var(--font-mono);font-size:11px;font-weight:700;}
-.ctrl-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow);}
-.lang-btn{width:auto;padding:0 10px;letter-spacing:.04em;}
-.icon-sun{display:none;}
-.icon-moon{display:block;}
-[data-theme="light"] .icon-sun{display:block;}
-[data-theme="light"] .icon-moon{display:none;}
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px; background: rgba(11, 16, 33, 0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--font-mono); font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: .04em; }
+.logo .accent { color: var(--accent); }
+.logo .warm { color: var(--accent-warm); }
+.header-nav { display: flex; gap: 32px; list-style: none; }
+.header-nav a { font-size: 13px; font-weight: 500; color: var(--text-muted); letter-spacing: .02em; transition: color .2s; }
+.header-nav a:hover { color: var(--text); }
+.header-controls { display: flex; align-items: center; gap: 8px; }
+.ctrl-btn { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; color: var(--text-muted); transition: var(--transition); flex-shrink: 0; font-family: var(--font-mono); font-size: 11px; font-weight: 700; }
+.ctrl-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+.lang-btn { width: auto; padding: 0 10px; letter-spacing: .04em; }
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+[data-theme="light"] .icon-sun { display: block; }
+[data-theme="light"] .icon-moon { display: none; }
 
-/* ── WRAPPER ── */
-.wrapper{max-width:1200px;margin:0 auto;padding:80px 32px 60px;position:relative;z-index:1;}
+.wrapper { max-width: 1200px; margin: 0 auto; padding: 80px 32px 60px; position: relative; z-index: 1; }
 
-/* ── SECTION ── */
-.section{margin-bottom:80px;}
-.section-label{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
-.section-label::before{content:'';width:20px;height:2px;background:var(--accent);border-radius:2px;}
-.section-label.warm{color:var(--accent-warm);}
-.section-label.warm::before{background:var(--accent-warm);}
-.section-title{font-size:clamp(26px,3vw,36px);font-weight:700;letter-spacing:-.02em;color:var(--text);margin-bottom:40px;line-height:1.2;}
+.section { margin-bottom: 80px; }
+.section-label { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.section-label::before { content: ''; width: 20px; height: 2px; background: var(--accent); border-radius: 2px; }
+.section-label.warm { color: var(--accent-warm); }
+.section-label.warm::before { background: var(--accent-warm); }
+.section-title { font-size: clamp(26px, 3vw, 36px); font-weight: 700; letter-spacing: -.02em; color: var(--text); margin-bottom: 40px; line-height: 1.2; }
 
 /* ── HERO ── */
-.hero{padding:60px 0 20px;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center;min-height:calc(100vh - 60px);}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(76,110,245,.08);border:1px solid rgba(76,110,245,.2);border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;}
-.hero-badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 2s ease-in-out infinite;}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-.hero-name{font-size:clamp(44px,6vw,72px);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:16px;}
-.hero-name .line1{display:block;color:var(--text);}
-.hero-name .line2{display:block;color:transparent;background:linear-gradient(135deg,var(--accent) 30%,var(--accent-warm));-webkit-background-clip:text;background-clip:text;}
-.hero-role{font-family:var(--font-mono);font-size:14px;color:var(--accent-warm);margin-bottom:20px;display:flex;align-items:center;gap:8px;}
-.hero-role::before{content:'$';color:var(--text-dim);}
-/* Typewriter cursor */
-.typewriter-cursor{display:inline-block;width:2px;height:1em;background:var(--accent-warm);margin-left:2px;vertical-align:middle;animation:cursor-blink .75s step-end infinite;}
-@keyframes cursor-blink{0%,100%{opacity:1;}50%{opacity:0;}}
-.hero-desc{font-size:16px;line-height:1.8;color:var(--text-muted);max-width:520px;margin-bottom:32px;}
-.hero-desc strong{color:var(--text);font-weight:600;}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;letter-spacing:.01em;border:none;cursor:pointer;transition:var(--transition);}
-.btn-primary{background:var(--accent);color:#fff;position:relative;overflow:hidden;}
-.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .25s;}
-.btn-primary:hover::after{opacity:1;}
-.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(76,110,245,.35);}
-.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border-light);}
-.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow);}
-.hero-stats{display:flex;gap:32px;padding-top:24px;border-top:1px solid var(--border);}
-.hero-stat-num{font-family:var(--font-mono);font-size:26px;font-weight:700;color:var(--accent);line-height:1;margin-bottom:4px;}
-.hero-stat-num.warm{color:var(--accent-warm);}
-.hero-stat-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);}
-/* Count-up animation */
-.count-up{transition:all .3s;}
+.hero { padding: 60px 0 20px; display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center; min-height: calc(100vh - 60px); }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(94, 114, 228, 0.1); border: 1px solid rgba(94, 114, 228, 0.3); border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+.hero-badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+.hero-name { font-size: clamp(44px, 6vw, 72px); font-weight: 800; letter-spacing: -.04em; line-height: 1; margin-bottom: 16px; }
+.hero-name .line1 { display: block; color: var(--text); }
+.hero-name .line2 { display: block; color: transparent; background: linear-gradient(135deg, var(--accent) 30%, var(--accent-cyan)); -webkit-background-clip: text; background-clip: text; }
+.hero-role { font-family: var(--font-mono); font-size: 14px; color: var(--accent-warm); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+.hero-role::before { content: '$'; color: var(--text-dim); }
+.typewriter-cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent-warm); margin-left: 2px; vertical-align: middle; animation: cursor-blink .75s step-end infinite; }
+@keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.hero-desc { font-size: 16px; line-height: 1.8; color: var(--text-muted); max-width: 520px; margin-bottom: 32px; }
+.hero-desc strong { color: var(--text); font-weight: 600; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; letter-spacing: .01em; border: none; cursor: pointer; transition: var(--transition); }
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-hover)); color: #fff; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(94, 114, 228, 0.35); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(94, 114, 228, 0.5); }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border-light); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+.hero-stats { display: flex; gap: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+.hero-stat-num { font-family: var(--font-mono); font-size: 26px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 4px; }
+.hero-stat-num.warm { color: var(--accent-warm); }
+.hero-stat-label { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim); }
 
 /* ── PHOTO ── */
-.hero-photo-wrap{position:relative;display:flex;flex-direction:column;align-items:center;}
-.hero-photo-frame{position:relative;width:320px;height:380px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-lg);background:var(--surface);transition:box-shadow .4s var(--ease),transform .4s var(--ease);}
-.hero-photo-frame:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 32px 80px rgba(76,110,245,.25);}
-.hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;}
-.hero-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(145deg,var(--surface),var(--surface-hi));color:var(--text-dim);font-size:12px;font-weight:500;text-align:center;padding:20px;}
-.hero-photo-placeholder svg{opacity:.2;}
-.hero-photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(12,14,22,.6) 0%,transparent 50%);pointer-events:none;}
-.hero-photo-accent{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 20px;display:flex;align-items:center;gap:8px;white-space:nowrap;box-shadow:var(--shadow-md);}
-.hero-photo-accent span{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);}
-.hero-photo-accent .dot-green{width:7px;height:7px;background:#22C55E;border-radius:50%;animation:blink 2s ease-in-out infinite;}
-/* Floating ring decoration */
-.hero-photo-ring{position:absolute;top:-20px;right:-20px;width:160px;height:160px;border-radius:50%;border:1px dashed var(--border-light);opacity:.4;animation:spin-slow 20s linear infinite;}
-.hero-photo-ring2{position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;border-radius:50%;border:1px dashed var(--accent);opacity:.2;animation:spin-slow 15s linear infinite reverse;}
-@keyframes spin-slow{to{transform:rotate(360deg);}}
+.hero-photo-wrap { position: relative; display: flex; flex-direction: column; align-items: center; }
+.hero-photo-frame { position: relative; width: 320px; height: 380px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-lg); background: var(--surface); transition: box-shadow .4s var(--ease), transform .4s var(--ease); }
+.hero-photo-frame:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 32px 80px rgba(94, 114, 228, 0.25); }
+.hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.hero-photo-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: linear-gradient(145deg, var(--surface), var(--surface-hi)); color: var(--text-dim); font-size: 12px; font-weight: 500; text-align: center; padding: 20px; }
+.hero-photo-placeholder svg { opacity: .2; }
+.hero-photo-frame::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11, 16, 33, 0.6) 0%, transparent 50%); pointer-events: none; }
+.hero-photo-accent { position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 20px; display: flex; align-items: center; gap: 8px; white-space: nowrap; box-shadow: var(--shadow-md); }
+.hero-photo-accent span { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); }
+.hero-photo-accent .dot-green { width: 7px; height: 7px; background: var(--accent-green); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+.hero-photo-ring { position: absolute; top: -20px; right: -20px; width: 160px; height: 160px; border-radius: 50%; border: 1px dashed var(--border-light); opacity: .4; animation: spin-slow 20s linear infinite; }
+.hero-photo-ring2 { position: absolute; bottom: -30px; left: -30px; width: 120px; height: 120px; border-radius: 50%; border: 1px dashed var(--accent); opacity: .2; animation: spin-slow 15s linear infinite reverse; }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
 
-/* ── DIVIDER ── */
-.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin-bottom:80px;}
+.divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin-bottom: 80px; }
 
 /* ── ABOUT ── */
-.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:start;}
-.about-text p{font-size:16px;line-height:1.85;color:var(--text-muted);margin-bottom:16px;}
-.about-text p:last-child{margin-bottom:0;}
-.about-text strong{color:var(--text);font-weight:600;}
-.about-text em{color:var(--accent);font-style:normal;}
-.about-facts{display:flex;flex-direction:column;gap:0;}
-.fact-item{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border);transition:var(--transition);}
-.fact-item:last-child{border-bottom:none;}
-.fact-item:hover{padding-left:6px;}
-.fact-key{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);}
-.fact-val{font-size:14px;font-weight:500;color:var(--text);text-align:right;max-width:180px;}
-.fact-val.accent{color:var(--accent);}
-.fact-val.warm{color:var(--accent-warm);}
+.about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 60px; align-items: start; }
+.about-text p { font-size: 16px; line-height: 1.85; color: var(--text-muted); margin-bottom: 16px; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-text strong { color: var(--text); font-weight: 600; }
+.about-text em { color: var(--accent); font-style: normal; }
+.about-facts { display: flex; flex-direction: column; gap: 0; }
+.fact-item { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--border); transition: var(--transition); }
+.fact-item:last-child { border-bottom: none; }
+.fact-item:hover { padding-left: 6px; }
+.fact-key { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim); }
+.fact-val { font-size: 14px; font-weight: 500; color: var(--text); text-align: right; max-width: 180px; }
+.fact-val.accent { color: var(--accent); }
+.fact-val.warm { color: var(--accent-warm); }
 
 /* ── EXPERIENCE ── */
-.timeline{position:relative;display:flex;flex-direction:column;gap:0;}
-.timeline::before{content:'';position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--accent),var(--border) 90%);}
-.timeline-item{position:relative;display:grid;grid-template-columns:40px 1fr;gap:24px;padding-bottom:40px;}
-.timeline-item:last-child{padding-bottom:0;}
-.timeline-dot{position:relative;width:40px;height:40px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;color:var(--accent);}
-.timeline-item.past .timeline-dot{border-color:var(--accent-warm);color:var(--accent-warm);}
-.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:22px 24px;transition:var(--transition);}
-.timeline-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px);}
-.timeline-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px;}
-.timeline-role{font-size:16px;font-weight:700;color:var(--text);}
-.timeline-period{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--accent);white-space:nowrap;}
-.timeline-item.past .timeline-period{color:var(--accent-warm);}
-.timeline-company{font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:4px;}
-.timeline-location{font-size:11px;color:var(--text-dim);margin-bottom:12px;font-family:var(--font-mono);}
-.timeline-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
-.timeline-list li{font-size:13px;line-height:1.6;color:var(--text-muted);padding-left:16px;position:relative;}
-.timeline-list li::before{content:'▸';position:absolute;left:0;color:var(--accent);}
-.timeline-item.past .timeline-list li::before{color:var(--accent-warm);}
+.timeline { position: relative; display: flex; flex-direction: column; gap: 0; }
+.timeline::before { content: ''; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--accent), var(--border) 90%); }
+.timeline-item { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 24px; padding-bottom: 40px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot { position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; color: var(--accent); }
+.timeline-item.past .timeline-dot { border-color: var(--accent-warm); color: var(--accent-warm); }
+.timeline-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 22px 24px; transition: var(--transition); }
+.timeline-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.timeline-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.timeline-role { font-size: 16px; font-weight: 700; color: var(--text); }
+.timeline-period { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.timeline-item.past .timeline-period { color: var(--accent-warm); }
+.timeline-company { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+.timeline-location { font-size: 11px; color: var(--text-dim); margin-bottom: 12px; font-family: var(--font-mono); }
+.timeline-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.timeline-list li { font-size: 13px; line-height: 1.6; color: var(--text-muted); padding-left: 16px; position: relative; }
+.timeline-list li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+.timeline-item.past .timeline-list li::before { color: var(--accent-warm); }
 
 /* ── SKILLS ── */
-.tech-logos-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;}
-.tech-logo-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px 14px;min-width:88px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);transition:var(--transition);cursor:default;position:relative;overflow:hidden;}
-.tech-logo-item::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-glow),transparent);opacity:0;transition:opacity .3s;}
-.tech-logo-item:hover::before{opacity:1;}
-.tech-logo-item:hover{border-color:var(--accent);transform:translateY(-6px) scale(1.04);box-shadow:0 12px 28px rgba(76,110,245,.2);}
-.tech-logo-item img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3));transition:transform .3s var(--ease);}
-.tech-logo-item:hover img{transform:scale(1.15) rotate(-5deg);}
-.tech-logo-item span{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--text-muted);white-space:nowrap;position:relative;}
-.tech-logo-item:hover span{color:var(--accent);}
-.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
-.skill-group-title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-.skill-group-title::before{content:'';width:14px;height:1px;background:var(--text-dim);}
-.skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.skill-tag{padding:7px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:12px;font-weight:500;color:var(--text-muted);background:var(--surface);transition:var(--transition);cursor:default;}
-.skill-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow);transform:translateY(-2px);}
-.skill-tag.warm:hover{border-color:var(--accent-warm);color:var(--accent-warm);background:var(--warm-glow);}
+.tech-logos-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
+.tech-logo-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 18px 14px; min-width: 88px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); transition: var(--transition); cursor: default; position: relative; overflow: hidden; }
+.tech-logo-item::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--accent-glow), transparent); opacity: 0; transition: opacity .3s; }
+.tech-logo-item:hover::before { opacity: 1; }
+.tech-logo-item:hover { border-color: var(--accent); transform: translateY(-6px) scale(1.04); box-shadow: 0 12px 28px rgba(94, 114, 228, 0.25); }
+.tech-logo-item img { width: 36px; height: 36px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .3)); transition: transform .3s var(--ease); }
+.tech-logo-item:hover img { transform: scale(1.15) rotate(-5deg); }
+.tech-logo-item span { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--text-muted); white-space: nowrap; position: relative; }
+.tech-logo-item:hover span { color: var(--accent); }
+.skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.skill-group-title { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.skill-group-title::before { content: ''; width: 14px; height: 1px; background: var(--text-dim); }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag { padding: 7px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--text-muted); background: var(--surface); transition: var(--transition); cursor: default; }
+.skill-tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); transform: translateY(-2px); }
+.skill-tag.warm:hover { border-color: var(--accent-warm); color: var(--accent-warm); background: var(--warm-glow); }
 
 /* ── PROJECTS ── */
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.project-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition);display:flex;flex-direction:column;position:relative;}
-.project-card::before{content:'';position:absolute;inset:0;border-radius:var(--radius-lg);background:linear-gradient(135deg,rgba(76,110,245,.06),transparent);opacity:0;transition:opacity .3s;pointer-events:none;z-index:0;}
-.project-card:hover::before{opacity:1;}
-.project-card:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 20px 40px rgba(76,110,245,.15);}
-.project-thumb{width:100%;height:auto;position:relative;overflow:hidden;background:var(--surface-hi);border-bottom:1px solid var(--border);flex-shrink:0;}
-.project-thumb img{width:100%;height:auto;object-fit:contain;transition:transform .5s var(--ease);}
-.project-card:hover .project-thumb img{transform:scale(1.05);}
-.project-thumb-placeholder{width:100%;height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--surface-hi) 0%,var(--surface) 100%);color:var(--text-dim);}
-.project-thumb-placeholder svg{opacity:.3;}
-.project-thumb-placeholder p{font-size:11px;font-weight:500;letter-spacing:.04em;opacity:.6;}
-.project-cat-badge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);}
-.project-cat-badge.web{background:rgba(76,110,245,.75);color:#fff;}
-.project-cat-badge.iot{background:rgba(232,164,70,.75);color:#fff;}
-.project-cat-badge.mobile{background:rgba(34,197,94,.75);color:#fff;}
-.project-body{padding:20px;display:flex;flex-direction:column;flex:1;position:relative;z-index:1;}
-.project-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:-.01em;}
-.project-desc{font-size:13px;line-height:1.7;color:var(--text-muted);flex:1;margin-bottom:16px;}
-.project-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.project-stack{display:flex;flex-wrap:wrap;gap:5px;flex:1;}
-.stack-tag{padding:3px 8px;background:rgba(255,255,255,.04);border-radius:4px;font-family:var(--font-mono);font-size:10px;color:var(--text-dim);border:1px solid var(--border);}
-.project-links{display:flex;gap:6px;flex-shrink:0;}
-.project-link{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:6px;color:var(--text-muted);font-size:12px;transition:var(--transition);}
-.project-link:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow);transform:scale(1.1);}
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.project-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; position: relative; }
+.project-card::before { content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(94, 114, 228, 0.08), transparent); opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 0; }
+.project-card:hover::before { opacity: 1; }
+.project-card:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(94, 114, 228, 0.18); }
+.project-thumb { width: 100%; height: 180px; position: relative; overflow: hidden; background: var(--surface-hi); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.project-card:hover .project-thumb img { transform: scale(1.05); }
+.project-thumb-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, var(--surface-hi) 0%, var(--surface) 100%); color: var(--text-dim); }
+.project-thumb-placeholder svg { opacity: .35; }
+.project-thumb-placeholder p { font-size: 11px; font-weight: 500; letter-spacing: .04em; opacity: .7; }
+.project-cat-badge { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .08); }
+.project-cat-badge.web { background: rgba(94, 114, 228, 0.85); color: #fff; }
+.project-cat-badge.iot { background: rgba(251, 99, 64, 0.85); color: #fff; }
+.project-body { padding: 20px; display: flex; flex-direction: column; flex: 1; position: relative; z-index: 1; }
+.project-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -.01em; }
+.project-desc { font-size: 13px; line-height: 1.7; color: var(--text-muted); flex: 1; margin-bottom: 16px; }
+.project-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; }
+.stack-tag { padding: 3px 8px; background: rgba(255, 255, 255, .04); border-radius: 4px; font-family: var(--font-mono); font-size: 10px; color: var(--text-dim); border: 1px solid var(--border); }
+.project-links { display: flex; gap: 6px; flex-shrink: 0; }
+.project-link { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 6px; color: var(--text-muted); font-size: 12px; transition: var(--transition); }
+.project-link:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); transform: scale(1.1); }
 
 /* ── CERTS ── */
-.certs-row{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
-.certs-row::-webkit-scrollbar{height:4px;}
-.certs-row::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.cert-card{min-width:260px;flex-shrink:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;transition:var(--transition);}
-.cert-card:hover{border-color:var(--accent-warm);transform:translateY(-4px);box-shadow:var(--shadow-md);}
-.cert-thumb{width:100%;height:130px;overflow:hidden;background:var(--surface-hi);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);}
-.cert-thumb img{width:100%;height:100%;object-fit:cover;}
-.cert-thumb-icon{font-size:40px;opacity:.2;}
-.cert-body{padding:14px 16px;}
-.cert-issuer{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-warm);margin-bottom:4px;}
-.cert-name{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:6px;}
-.cert-date{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);}
-.certs-empty{width:100%;padding:48px 24px;text-align:center;color:var(--text-dim);font-size:13px;background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius-md);}
-.certs-empty code{font-family:var(--font-mono);font-size:12px;color:var(--accent);background:var(--accent-glow);padding:2px 6px;border-radius:4px;}
+.certs-row { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.certs-row::-webkit-scrollbar { height: 4px; }
+.certs-row::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.cert-card { min-width: 260px; flex-shrink: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; transition: var(--transition); }
+.cert-card:hover { border-color: var(--accent-warm); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.cert-thumb { width: 100%; height: 130px; overflow: hidden; background: var(--surface-hi); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); }
+.cert-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.cert-thumb-icon { font-size: 40px; opacity: .2; }
+.cert-body { padding: 14px 16px; }
+.cert-issuer { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 4px; }
+.cert-name { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 6px; }
+.cert-date { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); }
+
+/* ── ABOUT DOCUMENTS & HKI ── */
+.about-docs-links { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.about-doc-btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; color: var(--text); transition: var(--transition); text-decoration: none; }
+.about-doc-btn svg { color: var(--accent); flex-shrink: 0; }
+.about-doc-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.project-hki-badge { position: absolute; top: 10px; left: 10px; display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 100px; background: rgba(17, 24, 46, 0.9); backdrop-filter: blur(8px); border: 1px solid rgba(251, 99, 64, 0.4); color: var(--accent-warm); font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .03em; z-index: 2; box-shadow: 0 4px 12px rgba(0, 0, 0, .3); transition: var(--transition); }
+.project-hki-badge:hover { background: var(--accent-warm); color: #fff; transform: scale(1.05); }
 
 /* ── CONTACT ── */
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-.contact-card{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);transition:var(--transition);position:relative;overflow:hidden;}
-.contact-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .3s var(--ease);}
-.contact-card:hover::after{transform:scaleX(1);}
-.contact-card:hover{border-color:var(--accent);background:var(--accent-glow);transform:translateY(-3px);box-shadow:0 8px 24px rgba(76,110,245,.15);}
-.contact-icon{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-muted);transition:var(--transition);}
-.contact-card:hover .contact-icon{border-color:var(--accent);color:var(--accent);transform:rotate(-5deg) scale(1.1);}
-.contact-info .contact-label{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;}
-.contact-info .contact-val{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);}
+.contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.contact-card { display: flex; align-items: center; gap: 14px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); transition: var(--transition); position: relative; overflow: hidden; }
+.contact-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .3s var(--ease); }
+.contact-card:hover::after { transform: scaleX(1); }
+.contact-card:hover { border-color: var(--accent); background: var(--accent-glow); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(94, 114, 228, 0.2); }
+.contact-icon { width: 40px; height: 40px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, .04); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-muted); transition: var(--transition); }
+.contact-card:hover .contact-icon { border-color: var(--accent); color: var(--accent); transform: rotate(-5deg) scale(1.1); }
+.contact-info .contact-label { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.contact-info .contact-val { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); }
 
 /* ── FOOTER ── */
-.footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;}
-.footer p{font-size:12px;color:var(--text-dim);}
-.footer span{color:var(--accent);}
+.footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+.footer p { font-size: 12px; color: var(--text-dim); }
+.footer span { color: var(--accent); font-weight: 600; }
 
 /* ── SCROLL REVEAL ── */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
-.reveal.left{transform:translateX(-32px);}
-.reveal.right{transform:translateX(32px);}
-.reveal.scale{transform:scale(.94);}
-.reveal.visible{opacity:1;transform:none;}
-.reveal-delay-1{transition-delay:.1s;}
-.reveal-delay-2{transition-delay:.2s;}
-.reveal-delay-3{transition-delay:.3s;}
-.reveal-delay-4{transition-delay:.4s;}
-.reveal-delay-5{transition-delay:.5s;}
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.left { transform: translateX(-32px); }
+.reveal.right { transform: translateX(32px); }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
 
-/* Hero entrance animations */
-.fade-up{opacity:0;transform:translateY(24px);animation:fadeUp .55s var(--ease) forwards;}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
-.d1{animation-delay:.05s;}.d2{animation-delay:.12s;}.d3{animation-delay:.20s;}
-.d4{animation-delay:.28s;}.d5{animation-delay:.36s;}.d6{animation-delay:.44s;}
+.fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp .55s var(--ease) forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.d1 { animation-delay: .05s; } .d2 { animation-delay: .12s; } .d3 { animation-delay: .20s; }
+.d4 { animation-delay: .28s; } .d5 { animation-delay: .36s; } .d6 { animation-delay: .44s; }
 
-/* ── MOBILE HAMBURGER ── */
-.hamburger{display:none;width:38px;height:38px;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text-muted);}
-.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);z-index:99;padding:16px 20px;flex-direction:column;gap:4px;}
-.mobile-nav.open{display:flex;}
-.mobile-nav a{padding:10px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--text-muted);}
-.mobile-nav a:hover{background:var(--accent-glow);color:var(--accent);}
+.hamburger { display: none; width: 38px; height: 38px; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; color: var(--text-muted); }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--border); z-index: 99; padding: 16px 20px; flex-direction: column; gap: 4px; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 500; color: var(--text-muted); }
+.mobile-nav a:hover { background: var(--accent-glow); color: var(--accent); }
 
-/* ── PROGRESS BAR ── */
-#scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent-warm));z-index:200;transform-origin:left;transform:scaleX(0);transition:transform .1s linear;}
+#scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(to right, var(--accent), var(--accent-warm)); z-index: 200; transform-origin: left; transform: scaleX(0); transition: transform .1s linear; }
 
-/* ── RESPONSIVE ── */
-@media(max-width:1024px){
-  .hero{grid-template-columns:1fr;min-height:auto;padding:40px 0;gap:40px;}
-  .hero-photo-wrap{order:-1;align-items:flex-start;}
-  .hero-photo-frame{width:220px;height:260px;}
-  .about-grid{grid-template-columns:1fr;gap:32px;}
-  .projects-grid{grid-template-columns:repeat(2,1fr);}
-  .contact-grid{grid-template-columns:repeat(2,1fr);}
-  .skills-layout{grid-template-columns:1fr;gap:28px;}
+@media(max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 40px 0; gap: 40px; }
+  .hero-photo-wrap { order: -1; align-items: flex-start; }
+  .hero-photo-frame { width: 220px; height: 260px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-layout { grid-template-columns: 1fr; gap: 28px; }
 }
-@media(max-width:768px){
-  .wrapper{padding:72px 20px 48px;}
-  .header-inner{padding:0 20px;}
-  .header-nav{display:none;}
-  .hamburger{display:flex;}
-  .header-controls,.header-controls *{transition:none!important;animation:none!important;}
-  .hero-name{font-size:40px;}
-  .projects-grid{grid-template-columns:1fr;}
-  .hero-stats{flex-wrap:wrap;gap:20px;}
-  .contact-grid{grid-template-columns:1fr 1fr;}
-  .section-title{font-size:26px;}
-  .timeline-item{grid-template-columns:28px 1fr;gap:14px;}
-  .timeline-dot{width:28px;height:28px;}
-  .timeline::before{left:13px;}
+@media(max-width: 768px) {
+  .wrapper { padding: 72px 20px 48px; }
+  .header-inner { padding: 0 20px; }
+  .header-nav { display: none; }
+  .hamburger { display: flex; }
+  .hero-name { font-size: 40px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .timeline-item { grid-template-columns: 28px 1fr; gap: 14px; }
+  .timeline-dot { width: 28px; height: 28px; }
+  .timeline::before { left: 13px; }
 }
-@media(max-width:480px){
-  .hero-actions{flex-direction:column;}
-  .btn{width:100%;justify-content:center;}
-  .contact-grid{grid-template-columns:1fr;}
+@media(max-width: 480px) {
+  .hero-actions { flex-direction: column; }
+  .btn { width: 100%; justify-content: center; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- Scroll progress -->
 <div id="scroll-progress"></div>
-
-<!-- Animated background -->
 <canvas id="bg-canvas"></canvas>
 
 <!-- Mobile nav -->
@@ -315,6 +325,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
   <a href="#experience" data-i18n="nav_experience">Experience</a>
   <a href="#skills" data-i18n="nav_skills">Skills</a>
   <a href="#projects" data-i18n="nav_projects">Projects</a>
+  <a href="#certs" data-i18n="nav_certs">Certifications</a>
   <a href="#contact" data-i18n="nav_contact">Contact</a>
 </nav>
 
@@ -327,18 +338,16 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
         <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
         <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#certs" data-i18n="nav_certs">Certifications</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </nav>
     <div class="header-controls">
-      <!-- Language toggle -->
       <button class="ctrl-btn lang-btn" id="lang-toggle" title="Toggle language">EN</button>
-      <!-- Theme toggle -->
       <button class="ctrl-btn" id="theme-toggle" title="Toggle theme">
         <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
-      <!-- Hamburger -->
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -353,7 +362,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
     <div class="hero-content">
       <div class="hero-badge fade-up d1">
         <span class="hero-badge-dot"></span>
-        <span data-i18n="hero_badge">Junior Software Engineer @ PT.Tentakel Integrasi Indonesia</span>
+        <span data-i18n="hero_badge">Software Engineer @ PT Tentakel Integrasi Indonesia</span>
       </div>
       <h1 class="hero-name fade-up d2">
         <span class="line1">Thomas Febry</span>
@@ -363,21 +372,17 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <span id="typewriter"></span><span class="typewriter-cursor"></span>
       </p>
       <p class="hero-desc fade-up d4" data-i18n="hero_desc">
-        <strong>Junior Software Engineer</strong> with 2 years of hands-on experience across
-        full-stack web development and IoT integration, currently finishing my final year in
-        <strong>Software Engineering</strong>. Grounded by a background in <strong>mechanical
-        engineering</strong>, I focus on building clean, maintainable systems that solve real
-        operational problems.
+        <strong>Software Engineer, Full-Stack Web Developer &amp; IoT Specialist</strong> bridging scalable web platforms with physical hardware automation. Grounded in mechanical precision, dedicated to solving real-world operational challenges.
       </p>
       <div class="hero-actions fade-up d5">
         <a href="#projects" class="btn btn-primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-          <span data-i18n="btn_projects">View Projects</span>
+          <span data-i18n="btn_projects">Featured Projects</span>
         </a>
-        <a href="#contact" class="btn btn-outline"><span data-i18n="btn_contact">Get in Touch</span></a>
+        <a href="#contact" class="btn btn-outline"><span data-i18n="btn_contact">Contact Me</span></a>
         <a href="docs/CV_Thomas_Febry_Cahyono.pdf" target="_blank" class="btn btn-outline">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span data-i18n="btn_cv">Download CV</span>
+          <span data-i18n="btn_cv">Download Resume</span>
         </a>
       </div>
       <div class="hero-stats fade-up d6">
@@ -387,15 +392,15 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num" data-count="12" data-suffix="+">12+</div>
-          <div class="hero-stat-label" data-i18n="stat_projects">Projects</div>
+          <div class="hero-stat-label" data-i18n="stat_projects">Completed Projects</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num" data-count="17" data-suffix="+">17+</div>
-          <div class="hero-stat-label" data-i18n="stat_stack">Tech Stack</div>
+          <div class="hero-stat-label" data-i18n="stat_stack">Technologies</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num warm" data-count="2" data-suffix="+">2+</div>
-          <div class="hero-stat-label" data-i18n="stat_bg">Years Experience</div>
+          <div class="hero-stat-num warm" data-count="4" data-suffix="+">4+</div>
+          <div class="hero-stat-label" data-i18n="stat_bg">Years Combined Exp</div>
         </div>
       </div>
     </div>
@@ -408,12 +413,12 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
         <div class="hero-photo-placeholder" style="display:none;">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <p>Place photo at<br/><code style="font-family:monospace;font-size:10px;color:#4C6EF5">assets/profile/Thomas.png</code></p>
+          <p>Thomas Febry Cahyono</p>
         </div>
       </div>
       <div class="hero-photo-accent">
         <span class="dot-green"></span>
-        <span data-i18n="available">Open to new opportunities</span>
+        <span data-i18n="available">Available for Opportunities</span>
       </div>
     </div>
   </section>
@@ -423,38 +428,49 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="section-label reveal" data-i18n="label_about">About Me</div>
-    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_about">Who I Am</h2>
+    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_about">Professional Profile</h2>
     <div class="about-grid">
       <div class="about-text reveal left reveal-delay-2">
-        <p data-i18n="about_p1">I'm <strong>Thomas Febry Cahyono</strong>, a final-year <em>Software Engineering</em> student at Universitas Bina Sarana Informatika, maintaining a <strong>3.75 / 4.00 GPA</strong>, and currently working as a <strong>Junior Software Engineer</strong> at PT Tentakel Integrasi Indonesia.</p>
-        <p data-i18n="about_p2">Before transitioning into software development, I built a foundation in <strong>mechanical engineering</strong>, spanning CNC machining, CAM programming, and welding. That background instilled a systematic, precision-driven approach to problem-solving that I carry into every line of code I write.</p>
-        <p data-i18n="about_p3">Today I focus on crafting <em>web applications</em> and <em>Internet of Things (IoT)</em> systems, connecting devices like ESP32, Arduino, and Raspberry Pi to larger platforms. I enjoy debugging more than most people, tracing the root cause of a problem rather than patching the visible symptom, and I lead with a "wake up, speak up, stand up" culture, where issues get raised early instead of bottled up until the deadline is looming.</p>
+        <p data-i18n="about_p1">I am <strong>Thomas Febry Cahyono</strong>, a <em>Software Engineering</em> graduate (S1) from Universitas Bina Sarana Informatika (GPA <strong>3.75 / 4.00</strong>), currently serving as a <strong>Software Engineer</strong> at PT Tentakel Integrasi Indonesia.</p>
+        <p data-i18n="about_p2">My professional journey originated in <strong>mechanical engineering and CNC precision fabrication</strong>. Working with tight physical tolerances instilled a disciplined, structured mindset that directly translates into writing fault-tolerant code, designing optimized relational databases, and architecting robust systems.</p>
+        <p data-i18n="about_p3">As a <strong>Full-Stack Web Developer &amp; IoT Specialist</strong>, I specialize in building maintainable web applications (Laravel, CodeIgniter 4) and end-to-end <strong>Internet of Things (IoT)</strong> ecosystems with ESP32, Arduino, and microcontrollers. I emphasize clean architecture, systematic root-cause debugging, and proactive cross-functional communication throughout the software lifecycle.</p>
       </div>
       <div class="about-facts reveal right reveal-delay-3">
-        <div class="fact-item"><span class="fact-key" data-i18n="fact_uni">University</span><span class="fact-val">Univ. Bina Sarana Informatika</span></div>
-        <div class="fact-item"><span class="fact-key" data-i18n="fact_major">Major</span><span class="fact-val" data-i18n="fact_major_val">Software Engineering</span></div>
-        <div class="fact-item"><span class="fact-key">GPA</span><span class="fact-val accent">3.75 / 4.00</span></div>
-        <div class="fact-item"><span class="fact-key" data-i18n="fact_year">Year</span><span class="fact-val warm" data-i18n="fact_year_val">Final Year</span></div>
-        <div class="fact-item"><span class="fact-key" data-i18n="fact_loc">Location</span><span class="fact-val">Depok, West Java, Indonesia</span></div>
-        <div class="fact-item"><span class="fact-key" data-i18n="fact_avail">Status</span><span class="fact-val accent" data-i18n="fact_avail_val">Employed · Open to New Roles</span></div>
+        <div class="fact-item"><span class="fact-key" data-i18n="fact_uni">Institution</span><span class="fact-val">Univ. Bina Sarana Informatika</span></div>
+        <div class="fact-item"><span class="fact-key" data-i18n="fact_major">Discipline</span><span class="fact-val" data-i18n="fact_major_val">Software Engineering</span></div>
+        <div class="fact-item"><span class="fact-key">Cumulative GPA</span><span class="fact-val accent">3.75 / 4.00</span></div>
+        <div class="fact-item"><span class="fact-key" data-i18n="fact_year">Credential</span><span class="fact-val warm" data-i18n="fact_year_val">Bachelor of Science (S1)</span></div>
+        <div class="fact-item"><span class="fact-key" data-i18n="fact_loc">Base</span><span class="fact-val">Depok &amp; Jakarta, Indonesia</span></div>
+        <div class="fact-item"><span class="fact-key" data-i18n="fact_avail">Current Status</span><span class="fact-val accent" data-i18n="fact_avail_val">Employed · Open to Engagements</span></div>
+        <div class="about-docs-links">
+          <a href="docs/Transkrip_Nilai_Thomas_Febry_Cahyono.pdf" target="_blank" class="about-doc-btn" title="Academic Transcript (GPA 3.75)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span data-i18n="btn_view_transcript">Academic Transcript</span>
+          </a>
+          <a href="docs/SKL_Thomas_Febry_Cahyono.pdf" target="_blank" class="about-doc-btn" title="Certificate of Graduation (SKL)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span data-i18n="btn_view_skl">Graduation Certificate</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-<!-- EXPERIENCE -->
+  <!-- EXPERIENCE -->
   <section class="section" id="experience">
-    <div class="section-label reveal" data-i18n="label_experience">Experience</div>
-    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_experience">Where I've Worked</h2>
+    <div class="section-label reveal" data-i18n="label_experience">Career Journey</div>
+    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_experience">Work Experience</h2>
     <div class="timeline">
+      <!-- Tentakel Integrasi -->
       <div class="timeline-item reveal left reveal-delay-1">
         <div class="timeline-dot">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         </div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <span class="timeline-role" data-i18n="exp1_role">Junior Software Engineer</span>
+            <span class="timeline-role" data-i18n="exp1_role">Software Engineer</span>
             <span class="timeline-period" data-i18n="exp1_period">Feb 2024 - Present</span>
           </div>
           <div class="timeline-company">
@@ -464,12 +480,14 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
           </div>
           <div class="timeline-location" data-i18n="exp1_location">Jakarta Raya, Indonesia</div>
           <ul class="timeline-list">
-            <li data-i18n="exp1_b1">Developed and maintained responsive, scalable custom web applications using Laravel and CodeIgniter 4.</li>
-            <li data-i18n="exp1_b2">Supported IoT and automation hardware integration into existing client infrastructure without disrupting live systems.</li>
-            <li data-i18n="exp1_b3">Collaborated on clean-code practices while bridging hardware devices with software interfaces.</li>
+            <li data-i18n="exp1_b1">Develop and maintain custom enterprise web platforms utilizing Laravel and CodeIgniter 4 with high maintainability standards.</li>
+            <li data-i18n="exp1_b2">Integrate IoT telemetry and automation devices with backend pipelines while preserving operational uptime.</li>
+            <li data-i18n="exp1_b3">Implement secure RESTful APIs, relational schema optimizations, and clean-code principles across cross-functional teams.</li>
           </ul>
         </div>
       </div>
+
+      <!-- PT. Bukit Palem -->
       <div class="timeline-item past reveal left reveal-delay-2">
         <div class="timeline-dot">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.77z"/></svg>
@@ -477,7 +495,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <div class="timeline-card">
           <div class="timeline-header">
             <span class="timeline-role" data-i18n="exp2_role">Mechanical Engineering Technician</span>
-            <span class="timeline-period" data-i18n="exp2_period">Mar 2019 - Feb 2022</span>
+            <span class="timeline-period" data-i18n="exp2_period">Feb 2020 - Feb 2022</span>
           </div>
           <div class="timeline-company">
             <a href="https://bp-agri.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-warm); text-decoration: none; border-bottom: 1px dashed var(--accent-warm); padding-bottom: 2px;">
@@ -486,10 +504,33 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
           </div>
           <div class="timeline-location" data-i18n="exp2_location">Singkup, Indonesia</div>
           <ul class="timeline-list">
-            <li data-i18n="exp2_b1">Independently produced technical drawings and blueprints for new production tooling and modifications.</li>
-            <li data-i18n="exp2_b2">Executed designs into finished parts through metal fabrication, welding, and manual lathe/milling operation.</li>
-            <li data-i18n="exp2_b3">Ran troubleshooting and routine maintenance on core production machinery to minimize downtime.</li>
-            <li data-i18n="exp2_b4">Ensured all tooling and mechanical processes complied with industrial K3 (health & safety) standards.</li>
+            <li data-i18n="exp2_b1">Authored technical blueprints and 2D/3D fabrication models for specialized manufacturing machinery.</li>
+            <li data-i18n="exp2_b2">Fabricated precision tooling components through lathe operation, milling, and industrial welding methods.</li>
+            <li data-i18n="exp2_b3">Executed preventative maintenance and rapid diagnostic interventions, significantly reducing production line downtime.</li>
+            <li data-i18n="exp2_b4">Enforced operational compliance adhering strictly to industrial workplace health and safety (K3) regulations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CV. Usaha Mandiri -->
+      <div class="timeline-item past reveal left reveal-delay-3">
+        <div class="timeline-dot">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="timeline-role" data-i18n="exp3_role">CNC Machine Operator</span>
+            <span class="timeline-period" data-i18n="exp3_period">Aug 2018 - Jan 2020</span>
+          </div>
+          <div class="timeline-company" data-i18n="exp3_company">
+            CV. Usaha Mandiri
+          </div>
+          <div class="timeline-location" data-i18n="exp3_location">Bogor, West Java, Indonesia</div>
+          <ul class="timeline-list">
+            <li data-i18n="exp3_b1">Operated multi-axis CNC machines to produce custom mold &amp; die components and jigs with tight micron tolerances.</li>
+            <li data-i18n="exp3_b2">Converted engineering drawings into structured machining workflows, verifying G-code to prevent tool collisions.</li>
+            <li data-i18n="exp3_b3">Managed workpiece zeroing, tool offsets, and preventative machine calibration for consistent repeatability.</li>
+            <li data-i18n="exp3_b4">Conducted systematic dimensional verifications using precision instruments to maintain zero-defect standards.</li>
           </ul>
         </div>
       </div>
@@ -500,50 +541,48 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 
   <!-- SKILLS -->
   <section class="section" id="skills">
-    <div class="section-label reveal" data-i18n="label_skills">Technical Skills</div>
-    <h2 class="section-title reveal reveal-delay-1">Tech Stack</h2>
+    <div class="section-label reveal" data-i18n="label_skills">Core Competencies</div>
+    <h2 class="section-title reveal reveal-delay-1">Tech Stack &amp; Skills</h2>
     <div class="tech-logos-grid reveal reveal-delay-2">
+      <a class="tech-logo-item" href="https://codeigniter.com/" target="_blank" rel="noopener noreferrer" title="CodeIgniter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"/><span>CodeIgniter</span></a>
+      <a class="tech-logo-item" href="https://laravel.com/" target="_blank" rel="noopener noreferrer" title="Laravel"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel"/><span>Laravel</span></a>
       <a class="tech-logo-item" href="https://www.php.net/" target="_blank" rel="noopener noreferrer" title="PHP"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg" alt="PHP"/><span>PHP</span></a>
       <a class="tech-logo-item" href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"/><span>Python</span></a>
       <a class="tech-logo-item" href="https://go.dev/" target="_blank" rel="noopener noreferrer" title="Go"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Golang"/><span>Golang</span></a>
       <a class="tech-logo-item" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/><span>JavaScript</span></a>
-      <a class="tech-logo-item" href="https://laravel.com/" target="_blank" rel="noopener noreferrer" title="Laravel"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel"/><span>Laravel</span></a>
-      <a class="tech-logo-item" href="https://codeigniter.com/" target="_blank" rel="noopener noreferrer" title="CodeIgniter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"/><span>CodeIgniter</span></a>
       <a class="tech-logo-item" href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" title="MySQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"/><span>MySQL</span></a>
-      <a class="tech-logo-item" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" title="HTML5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"/><span>HTML5</span></a>
-      <a class="tech-logo-item" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" title="CSS3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/><span>CSS3</span></a>
-      <a class="tech-logo-item" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" title="Bootstrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"/><span>Bootstrap</span></a>
       <a class="tech-logo-item" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" title="Tailwind CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"/><span>Tailwind</span></a>
+      <a class="tech-logo-item" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" title="Bootstrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"/><span>Bootstrap</span></a>
       <a class="tech-logo-item" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" title="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/><span>Git</span></a>
       <a class="tech-logo-item" href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" title="Docker"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"/><span>Docker</span></a>
       <a class="tech-logo-item" href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer" title="Arduino"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" alt="Arduino"/><span>Arduino</span></a>
       <a class="tech-logo-item" href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer" title="Raspberry Pi"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi"/><span>Raspberry Pi</span></a>
       <a class="tech-logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="github-icon" style="filter:invert(1) drop-shadow(0 2px 4px rgba(0,0,0,.3))"/><span>GitHub</span></a>
-      <a class="tech-logo-item" href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" title="Linux"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"/><span>Linux</span></a>
+      <a class="tech-logo-item" href="https://linux.org/" target="_blank" rel="noopener noreferrer" title="Linux"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"/><span>Linux</span></a>
     </div>
     <div class="skills-layout">
       <div class="reveal left reveal-delay-2">
         <div class="skill-group">
-          <div class="skill-group-title" data-i18n="sg_backend">Backend &amp; Database</div>
-          <div class="skill-tags"><span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span><span class="skill-tag">CodeIgniter</span><span class="skill-tag">Python</span><span class="skill-tag">Golang</span><span class="skill-tag">MySQL</span><span class="skill-tag">REST API</span></div>
+          <div class="skill-group-title" data-i18n="sg_backend">Backend &amp; Databases</div>
+          <div class="skill-tags"><span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span><span class="skill-tag">CodeIgniter 4</span><span class="skill-tag">Python</span><span class="skill-tag">Golang</span><span class="skill-tag">MySQL</span><span class="skill-tag">RESTful APIs</span></div>
         </div>
         <div class="skill-group" style="margin-top:28px">
-          <div class="skill-group-title" data-i18n="sg_frontend">Frontend &amp; Tooling</div>
-          <div class="skill-tags"><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Chart.js</span><span class="skill-tag">Git</span><span class="skill-tag">Docker</span></div>
+          <div class="skill-group-title" data-i18n="sg_frontend">Frontend &amp; DevOps Tooling</div>
+          <div class="skill-tags"><span class="skill-tag">JavaScript (ES6+)</span><span class="skill-tag">HTML5 / CSS3</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">Chart.js</span><span class="skill-tag">Git / GitHub</span><span class="skill-tag">Docker</span></div>
         </div>
         <div class="skill-group" style="margin-top:28px">
-          <div class="skill-group-title" data-i18n="sg_iot">IoT &amp; Embedded Systems</div>
-          <div class="skill-tags"><span class="skill-tag">Arduino</span><span class="skill-tag">ESP32</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">RFID</span><span class="skill-tag">MQTT</span><span class="skill-tag">Sensor Integration</span></div>
+          <div class="skill-group-title" data-i18n="sg_iot">Embedded Systems &amp; IoT</div>
+          <div class="skill-tags"><span class="skill-tag">ESP32</span><span class="skill-tag">Arduino (C/C++)</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">MQTT Protocol</span><span class="skill-tag">Sensor Integration</span><span class="skill-tag">Telegram Bot API</span></div>
         </div>
       </div>
       <div class="reveal right reveal-delay-3">
         <div class="skill-group">
-          <div class="skill-group-title" data-i18n="sg_mech">Mechanical Engineering</div>
-          <div class="skill-tags"><span class="skill-tag warm">CNC Machining</span><span class="skill-tag warm">CAM Programming</span><span class="skill-tag warm">Milling</span><span class="skill-tag warm">Welding</span><span class="skill-tag warm">AutoCAD</span><span class="skill-tag warm">G-Code</span></div>
+          <div class="skill-group-title" data-i18n="sg_mech">Engineering &amp; Manufacturing</div>
+          <div class="skill-tags"><span class="skill-tag warm">CNC Machining</span><span class="skill-tag warm">MasterCAM</span><span class="skill-tag warm">Precision Tooling</span><span class="skill-tag warm">Milling &amp; Lathe</span><span class="skill-tag warm">Industrial Safety (K3)</span><span class="skill-tag warm">Blueprint Reading</span></div>
         </div>
         <div class="skill-group" style="margin-top:28px">
-          <div class="skill-group-title" data-i18n="sg_soft">Soft Skills</div>
-          <div class="skill-tags"><span class="skill-tag warm" data-i18n="sk_ps">Problem Solving</span><span class="skill-tag warm" data-i18n="sk_tc">Team Collaboration</span><span class="skill-tag warm" data-i18n="sk_comm">Communication</span><span class="skill-tag warm" data-i18n="sk_doc">Documentation</span></div>
+          <div class="skill-group-title" data-i18n="sg_soft">Professional Practices</div>
+          <div class="skill-tags"><span class="skill-tag warm" data-i18n="sk_ps">Root-Cause Analysis</span><span class="skill-tag warm" data-i18n="sk_tc">Cross-Functional Teamwork</span><span class="skill-tag warm" data-i18n="sk_comm">Technical Communication</span><span class="skill-tag warm" data-i18n="sk_doc">System Documentation</span></div>
         </div>
       </div>
     </div>
@@ -553,8 +592,8 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 
   <!-- PROJECTS -->
   <section class="section" id="projects">
-    <div class="section-label reveal" data-i18n="label_projects">Featured Projects</div>
-    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_projects">Selected Work</h2>
+    <div class="section-label reveal" data-i18n="label_projects">Featured Work</div>
+    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_projects">Highlighted Projects</h2>
     <div class="projects-grid" id="projects-grid"></div>
   </section>
 
@@ -562,8 +601,8 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 
   <!-- CERTIFICATIONS -->
   <section class="section" id="certs">
-    <div class="section-label warm reveal" data-i18n="label_certs">Certifications</div>
-    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_certs">Credentials</h2>
+    <div class="section-label warm reveal" data-i18n="label_certs">Verified Credentials</div>
+    <h2 class="section-title reveal reveal-delay-1" data-i18n="title_certs">Certifications &amp; Licenses</h2>
     <div id="certs-container" class="reveal reveal-delay-2"></div>
   </section>
 
@@ -571,7 +610,7 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 
   <!-- CONTACT -->
   <section class="section" id="contact">
-    <div class="section-label reveal" data-i18n="label_contact">Contact</div>
+    <div class="section-label reveal" data-i18n="label_contact">Get In Touch</div>
     <h2 class="section-title reveal reveal-delay-1" data-i18n="title_contact">Let's Connect</h2>
     <div class="contact-grid">
       <a href="mailto:Febry.thomas.98@gmail.com" class="contact-card reveal reveal-delay-1">
@@ -586,15 +625,16 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
         <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
         <div class="contact-info"><div class="contact-label">WhatsApp</div><div class="contact-val">+62 822-4244-3533</div></div>
       </a>
-      <a href="https://www.linkedin.com/in/thomas-febry-cahyono-0091291a3/" target="_blank" class="contact-card reveal reveal-delay-4">
+      <a href="https://linkedin.com/in/thomas-febry-cahyono-0091291a3/" target="_blank" class="contact-card reveal reveal-delay-4">
         <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
         <div class="contact-info"><div class="contact-label">LinkedIn</div><div class="contact-val">Thomas Febry Cahyono</div></div>
       </a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer reveal">
-    <p>Designed &amp; Built by <span>Thomas Febry Cahyono</span> &nbsp;·&nbsp; 2025</p>
+    <p>&copy; <span id="current-year"></span> <span>Thomas Febry Cahyono</span>. All rights reserved.</p>
   </footer>
 </main>
 
@@ -602,91 +642,142 @@ a{text-decoration:none;color:inherit;transition:var(--transition);}
 /* ═══════════ i18n DICTIONARY ═══════════ */
 const I18N = {
   en: {
-    nav_about:'About', nav_experience:'Experience', nav_skills:'Skills', nav_projects:'Projects', nav_contact:'Contact',
-    hero_badge:'Junior Software Engineer @ PT Tentakel Integrasi Indonesia',
-    hero_desc:'<strong>Junior Software Engineer</strong> with 2 years of hands-on experience across full-stack web development and IoT integration, currently finishing my final year in <strong>Software Engineering</strong>. Grounded by a background in <strong>mechanical engineering</strong>, I focus on building clean, maintainable systems that solve real operational problems.',
-    hero_role:'Software Engineer & IoT Developer',
-    btn_projects:'View Projects', btn_contact:'Get in Touch', btn_cv:'Download CV',
-    stat_projects:'Projects', stat_stack:'Tech Stack', stat_bg:'Years Experience',
-    available:'Open to new opportunities',
-    label_about:'About Me', title_about:'Who I Am',
-    about_p1:'I\'m <strong>Thomas Febry Cahyono</strong>, a final-year <em>Software Engineering</em> student at Universitas Bina Sarana Informatika, maintaining a <strong>3.75 / 4.00 GPA</strong>, and currently working as a <strong>Junior Software Engineer</strong> at PT Tentakel Integrasi Indonesia.',
-    about_p2:'Before transitioning into software development, I built a foundation in <strong>mechanical engineering</strong>, spanning CNC machining, CAM programming, and welding. That background instilled a systematic, precision-driven approach to problem-solving that I carry into every line of code I write.',
-    about_p3:'Today I focus on crafting <em>web applications</em> and <em>Internet of Things (IoT)</em> systems, connecting devices like ESP32, Arduino, and Raspberry Pi to larger platforms. I enjoy debugging more than most people, tracing the root cause of a problem rather than patching the visible symptom, and I lead with a "wake up, speak up, stand up" culture, where issues get raised early instead of bottled up until the deadline is looming.',
-    fact_uni:'University', fact_major:'Major', fact_major_val:'Software Engineering',
-    fact_year:'Year', fact_year_val:'Final Year',
-    fact_loc:'Location', fact_avail:'Status', fact_avail_val:'Employed · Open to New Roles',
-    label_experience:'Experience', title_experience:"Where I've Worked",
-    exp1_role:'Junior Software Engineer', exp1_period:'Feb 2024 - Present', exp1_location:'Jakarta Raya, Indonesia',
-    exp1_b1:'Developed and maintained responsive, scalable custom web applications using Laravel and CodeIgniter 4.',
-    exp1_b2:'Supported IoT and automation hardware integration into existing client infrastructure without disrupting live systems.',
-    exp1_b3:'Collaborated on clean-code practices while bridging hardware devices with software interfaces.',
-    exp2_role:'Mechanical Engineering Technician', exp2_period:'Mar 2019 - Feb 2022', exp2_location:'Singkup, Indonesia',
-    exp2_b1:'Independently produced technical drawings and blueprints for new production tooling and modifications.',
-    exp2_b2:'Executed designs into finished parts through metal fabrication, welding, and manual lathe/milling operation.',
-    exp2_b3:'Ran troubleshooting and routine maintenance on core production machinery to minimize downtime.',
-    exp2_b4:'Ensured all tooling and mechanical processes complied with industrial K3 (health & safety) standards.',
-    label_skills:'Technical Skills',
-    sg_backend:'Backend & Database', sg_frontend:'Frontend & Tooling',
-    sg_iot:'IoT & Embedded Systems', sg_mech:'Mechanical Engineering', sg_soft:'Soft Skills',
-    sk_ps:'Problem Solving', sk_tc:'Team Collaboration', sk_comm:'Communication', sk_doc:'Documentation',
-    label_projects:'Featured Projects', title_projects:'Selected Work',
-    label_certs:'Certifications', title_certs:'Credentials',
-    label_contact:'Contact', title_contact:"Let's Connect",
-    proj_simpl_desc:'A multi-role educational platform featuring a gamified point system, tiered approval workflows, and a dual-channel notification pipeline serving 500+ members across 6 divisions.',
-    proj_conexpr_desc:'A document control and project management system for engineering teams, featuring a 4-tier approval state machine, full-text search across 10K+ documents, and ISO-compliant audit trails.',
-    proj_electra_desc:'An electricity billing platform with automated kWh calculation, a 4-stage payment confirmation workflow, a prepaid token marketplace, and monthly PDF report generation.',
-    certs_empty:'Add your certifications by populating the <code>CERTS</code> array in the JavaScript section.',
+    nav_about:'About', nav_experience:'Experience', nav_skills:'Skills', nav_projects:'Projects', nav_certs:'Certifications', nav_contact:'Contact',
+    hero_badge:'Software Engineer @ PT Tentakel Integrasi Indonesia',
+    hero_desc:'<strong>Software Engineer, Full-Stack Web Developer &amp; IoT Specialist</strong> bridging scalable web platforms with physical hardware automation. Grounded in mechanical precision, dedicated to solving real-world operational challenges.',
+    hero_role:'Software Engineer · Full-Stack Web Developer · IoT Specialist',
+    btn_projects:'Featured Projects', btn_contact:'Contact Me', btn_cv:'Download Resume',
+    stat_projects:'Completed Projects', stat_stack:'Technologies', stat_bg:'Years Combined Exp',
+    available:'Available for Opportunities',
+    label_about:'About Me', title_about:'Professional Profile',
+    about_p1:'I am <strong>Thomas Febry Cahyono</strong>, a <em>Software Engineering</em> graduate (S1) from Universitas Bina Sarana Informatika (GPA <strong>3.75 / 4.00</strong>), currently serving as a <strong>Software Engineer</strong> at PT Tentakel Integrasi Indonesia.',
+    about_p2:'My professional journey originated in <strong>mechanical engineering and CNC precision fabrication</strong>. Working with tight physical tolerances instilled a disciplined, structured mindset that directly translates into writing fault-tolerant code, designing optimized relational databases, and architecting robust systems.',
+    about_p3:'As a <strong>Full-Stack Web Developer &amp; IoT Specialist</strong>, I specialize in building maintainable web applications (Laravel, CodeIgniter 4) and end-to-end <strong>Internet of Things (IoT)</strong> ecosystems with ESP32, Arduino, and microcontrollers. I emphasize clean architecture, systematic root-cause debugging, and proactive cross-functional communication throughout the software lifecycle.',
+    fact_uni:'Institution', fact_major:'Discipline', fact_major_val:'Software Engineering',
+    fact_year:'Credential', fact_year_val:'Bachelor of Science (S1)',
+    fact_loc:'Base', fact_avail:'Current Status', fact_avail_val:'Employed · Open to Engagements',
+    btn_view_transcript:'Academic Transcript', btn_view_skl:'Graduation Certificate',
+    label_experience:'Career Journey', title_experience:"Work Experience",
+    exp1_role:'Software Engineer', exp1_period:'Feb 2024 - Present', exp1_location:'Jakarta Raya, Indonesia',
+    exp1_b1:'Develop and maintain custom enterprise web platforms utilizing Laravel and CodeIgniter 4 with high maintainability standards.',
+    exp1_b2:'Integrate IoT telemetry and automation devices with backend pipelines while preserving operational uptime.',
+    exp1_b3:'Implement secure RESTful APIs, relational schema optimizations, and clean-code principles across cross-functional teams.',
+    exp2_role:'Mechanical Engineering Technician', exp2_period:'Feb 2020 - Feb 2022', exp2_location:'Singkup, Indonesia',
+    exp2_b1:'Authored technical blueprints and 2D/3D fabrication models for specialized manufacturing machinery.',
+    exp2_b2:'Fabricated precision tooling components through lathe operation, milling, and industrial welding methods.',
+    exp2_b3:'Executed preventative maintenance and rapid diagnostic interventions, significantly reducing production line downtime.',
+    exp2_b4:'Enforced operational compliance adhering strictly to industrial workplace health and safety (K3) regulations.',
+    exp3_role:'CNC Machine Operator', exp3_period:'Aug 2018 - Jan 2020', exp3_company:'CV. Usaha Mandiri', exp3_location:'Bogor, West Java, Indonesia',
+    exp3_b1:'Operated multi-axis CNC machines to produce custom mold & die components and jigs with tight micron tolerances.',
+    exp3_b2:'Converted engineering drawings into structured machining workflows, verifying G-code to prevent tool collisions.',
+    exp3_b3:'Managed workpiece zeroing, tool offsets, and preventative machine calibration for consistent repeatability.',
+    exp3_b4:'Conducted systematic dimensional verifications using precision instruments to maintain zero-defect standards.',
+    label_skills:'Core Competencies',
+    sg_backend:'Backend & Databases', sg_frontend:'Frontend & DevOps Tooling',
+    sg_iot:'Embedded Systems & IoT', sg_mech:'Engineering & Manufacturing', sg_soft:'Professional Practices',
+    sk_ps:'Root-Cause Analysis', sk_tc:'Cross-Functional Teamwork', sk_comm:'Technical Communication', sk_doc:'System Documentation',
+    label_projects:'Featured Work', title_projects:'Highlighted Projects',
+    label_certs:'Verified Credentials', title_certs:'Certifications & Licenses',
+    label_contact:'Get In Touch', title_contact:"Let's Connect",
+    proj_simpl_desc:'A multi-tier organizational management system featuring gamified member progression, structured approval state-machines, and real-time alerts. Registered under official Copyright (HKI No. 001388006).',
+    proj_iot_desc:'An autonomous climate-adaptive drying apparatus driven by an ESP32 microcontroller, dual optical/rain telemetry sensors, and a bidirectional Telegram Bot interface for remote manual control and alerts.',
+    proj_conexpr_desc:'An engineering document control and workflow management system featuring multi-tier approval state machines, sub-second indexed search, and ISO-compliant audit logs.',
+    proj_electra_desc:'A centralized utilities billing and tariff platform featuring automated consumption formulas, multi-tier transactional validation workflows, and dynamic PDF statement engines.',
+    certs_empty:'Certifications will appear here once populated.',
     certs_fmt:'Format: {issuer, name, date, image, credential}'
   },
   id: {
-    nav_about:'Tentang', nav_experience:'Pengalaman', nav_skills:'Keahlian', nav_projects:'Proyek', nav_contact:'Kontak',
-    hero_badge:'Junior Software Engineer @ PT Tentakel Integrasi Indonesia',
-    hero_desc:'<strong>Junior Software Engineer</strong> dengan pengalaman langsung 2 tahun di pengembangan web full-stack dan integrasi IoT, saat ini menyelesaikan tahun akhir <strong>Rekayasa Perangkat Lunak</strong>. Dibekali latar belakang <strong>teknik mesin</strong>, saya fokus membangun sistem yang bersih dan mudah dipelihara untuk memecahkan masalah operasional nyata.',
-    hero_role:'Software Engineer & IoT Developer',
-    btn_projects:'Lihat Proyek', btn_contact:'Hubungi Saya', btn_cv:'Unduh CV',
-    stat_projects:'Proyek', stat_stack:'Tech Stack', stat_bg:'Tahun Pengalaman',
-    available:'Terbuka untuk peluang baru',
-    label_about:'Tentang Saya', title_about:'Siapa Saya',
-    about_p1:'Saya <strong>Thomas Febry Cahyono</strong>, mahasiswa tingkat akhir <em>Rekayasa Perangkat Lunak</em> di Universitas Bina Sarana Informatika dengan IPK <strong>3,75 / 4,00</strong>, dan saat ini bekerja sebagai <strong>Junior Software Engineer</strong> di PT Tentakel Integrasi Indonesia.',
-    about_p2:'Sebelum beralih ke pengembangan perangkat lunak, saya memiliki fondasi di bidang <strong>teknik mesin</strong>, mencakup CNC machining, CAM programming, dan pengelasan. Latar belakang itu menanamkan pendekatan sistematis berbasis presisi dalam memecahkan masalah yang saya bawa ke setiap baris kode.',
-    about_p3:'Saat ini saya berfokus pada pengembangan <em>aplikasi web</em> dan sistem <em>Internet of Things (IoT)</em>, menghubungkan perangkat seperti ESP32, Arduino, dan Raspberry Pi ke platform yang lebih besar. Saya lebih senang debugging dibanding kebanyakan orang, menelusuri akar masalah alih-alih sekadar menambal gejala yang tampak, dan saya memimpin dengan budaya "wake up, speak up, stand up", di mana kendala disampaikan lebih awal, bukan dipendam sampai deadline mepet.',
-    fact_uni:'Universitas', fact_major:'Program Studi', fact_major_val:'Rekayasa Perangkat Lunak',
-    fact_year:'Tahun', fact_year_val:'Tingkat Akhir',
-    fact_loc:'Lokasi', fact_avail:'Status', fact_avail_val:'Bekerja · Terbuka untuk Peran Baru',
-    label_experience:'Pengalaman', title_experience:'Riwayat Kerja',
-    exp1_role:'Junior Software Engineer', exp1_period:'Feb 2024 - Sekarang', exp1_location:'Jakarta Raya, Indonesia',
-    exp1_b1:'Mengembangkan dan memelihara aplikasi web custom yang responsif dan terukur menggunakan Laravel dan CodeIgniter 4.',
-    exp1_b2:'Mendukung integrasi perangkat keras IoT/otomasi ke infrastruktur klien tanpa merombak sistem yang sedang berjalan.',
-    exp1_b3:'Berkolaborasi menyusun kode yang rapi (clean code) sembari menjembatani perangkat keras dengan antarmuka perangkat lunak.',
-    exp2_role:'Mechanical Engineering Technician', exp2_period:'Mar 2019 - Feb 2022', exp2_location:'Singkup, Indonesia',
-    exp2_b1:'Membuat gambar kerja teknis (desain/blueprint) secara mandiri untuk perencanaan proyek pembuatan dan modifikasi alat produksi baru.',
-    exp2_b2:'Mengeksekusi rancangan desain menjadi produk nyata melalui fabrikasi logam, pengelasan, dan pengoperasian mesin bubut/milling manual.',
-    exp2_b3:'Melakukan troubleshooting dan pemeliharaan rutin pada mesin produksi utama untuk meminimalisir downtime.',
-    exp2_b4:'Memastikan seluruh perancangan alat dan proses mekanikal mematuhi standar K3 di lingkungan industri.',
-    label_skills:'Keahlian Teknis',
-    sg_backend:'Backend & Database', sg_frontend:'Frontend & Alat',
-    sg_iot:'IoT & Sistem Tertanam', sg_mech:'Teknik Mesin', sg_soft:'Soft Skill',
-    sk_ps:'Pemecahan Masalah', sk_tc:'Kerja Tim', sk_comm:'Komunikasi', sk_doc:'Dokumentasi',
-    label_projects:'Proyek Unggulan', title_projects:'Karya Pilihan',
-    label_certs:'Sertifikasi', title_certs:'Kredensial',
-    label_contact:'Kontak', title_contact:'Mari Terhubung',
-    proj_simpl_desc:'Platform edukasi multi-role dengan sistem poin gamifikasi, alur persetujuan berjenjang, dan pipeline notifikasi dual-channel untuk 500+ anggota di 6 divisi.',
-    proj_conexpr_desc:'Sistem manajemen dokumen & proyek untuk tim engineering, dengan state machine 4-tier approval, pencarian teks lengkap di 10K+ dokumen, dan audit trail sesuai standar ISO.',
-    proj_electra_desc:'Platform billing listrik dengan kalkulasi kWh otomatis, alur konfirmasi pembayaran 4 tahap, marketplace token prabayar, dan ekspor laporan PDF bulanan.',
-    certs_empty:'Tambahkan sertifikat dengan mengisi array <code>CERTS</code> di bagian JavaScript.',
+    nav_about:'Tentang', nav_experience:'Pengalaman', nav_skills:'Keahlian', nav_projects:'Proyek', nav_certs:'Sertifikasi', nav_contact:'Kontak',
+    hero_badge:'Software Engineer @ PT Tentakel Integrasi Indonesia',
+    hero_desc:'<strong>Software Engineer, Full-Stack Web Developer &amp; IoT Specialist</strong> yang memadukan pengembangan aplikasi web skala enterprise dengan otomasi hardware dan IoT. Berakar dari disiplin presisi teknik mesin, berdedikasi memecahkan masalah operasional nyata.',
+    hero_role:'Software Engineer · Full-Stack Web Developer · IoT Specialist',
+    btn_projects:'Karya Unggulan', btn_contact:'Hubungi Saya', btn_cv:'Unduh CV',
+    stat_projects:'Proyek Selesai', stat_stack:'Teknologi', stat_bg:'Tahun Pengalaman Gabungan',
+    available:'Terbuka untuk Peluang Kerja',
+    label_about:'Tentang Saya', title_about:'Profil Profesional',
+    about_p1:'Saya <strong>Thomas Febry Cahyono</strong>, lulusan sarjana (S1) <em>Rekayasa Perangkat Lunak</em> dari Universitas Bina Sarana Informatika (IPK <strong>3,75 / 4,00</strong>), saat ini aktif berkarier sebagai <strong>Software Engineer</strong> di PT Tentakel Integrasi Indonesia.',
+    about_p2:'Fondasi profesional saya berakar dari <strong>teknik mesin dan manufaktur presisi CNC</strong>. Terbiasa bekerja dengan toleransi dimensi mikron menanamkan kedisiplinan analitis tinggi yang kini saya terapkan dalam menulis kode bersih, merancang skema database optimal, serta mendesain arsitektur perangkat lunak yang tangguh.',
+    about_p3:'Sebagai <strong>Full-Stack Web Developer &amp; IoT Specialist</strong>, fokus keahlian saya mencakup rekayasa aplikasi web modern (Laravel, CodeIgniter 4) dan integrasi ekosistem <strong>Internet of Things (IoT)</strong> berbasis ESP32, Arduino, dan mikrokontroler. Saya mengutamakan arsitektur modular, pelacakan akar masalah sistematis, serta komunikasi proaktif lintas divisi dalam setiap siklus pengembangan.',
+    fact_uni:'Perguruan Tinggi', fact_major:'Program Studi', fact_major_val:'Rekayasa Perangkat Lunak',
+    fact_year:'Pendidikan', fact_year_val:'Sarjana Komputer (S1)',
+    fact_loc:'Domisili', fact_avail:'Status Terkini', fact_avail_val:'Bekerja · Terbuka untuk Diskusi Peluang',
+    btn_view_transcript:'Transkrip Akademik (KHS)', btn_view_skl:'Surat Keterangan Lulus (SKL)',
+    label_experience:'Riwayat Karier', title_experience:'Pengalaman Kerja',
+    exp1_role:'Software Engineer', exp1_period:'Feb 2024 - Sekarang', exp1_location:'Jakarta Raya, Indonesia',
+    exp1_b1:'Mengembangkan serta mengelola aplikasi web kustom enterprise berbasis Laravel dan CodeIgniter 4 dengan standar maintainability tinggi.',
+    exp1_b2:'Mengintegrasikan telemetri perangkat keras IoT dan modul otomasi ke pipeline sistem tanpa mengganggu keandalan operasional klien.',
+    exp1_b3:'Mengimplementasikan API RESTful yang aman, optimasi query database relasional, dan praktik clean-code bersama tim lintas fungsi.',
+    exp2_role:'Mechanical Engineering Technician', exp2_period:'Feb 2020 - Feb 2022', exp2_location:'Singkup, Indonesia',
+    exp2_b1:'Merancang gambar kerja teknis dan pemodelan fabrikasi 2D/3D untuk komponen mesin produksi khusus.',
+    exp2_b2:'Mengeksekusi perakitan perkakas industri presisi tinggi melalui pembubutan, frais (milling), dan pengelasan mekanis.',
+    exp2_b3:'Menjalankan pemeliharaan preventif serta diagnosa kerusakan mesin secara cepat guna meminimalkan downtime pabrik.',
+    exp2_b4:'Memastikan kepatuhan keselamatan kerja di seluruh proses mekanikal sesuai standar K3 lingkungan industri.',
+    exp3_role:'Operator Mesin CNC', exp3_period:'Agu 2018 - Jan 2020', exp3_company:'CV. Usaha Mandiri', exp3_location:'Bogor, Jawa Barat, Indonesia',
+    exp3_b1:'Mengoperasikan mesin CNC untuk memproduksi komponen cetakan (mold & die) serta jig & fixture kustom dengan toleransi ketat.',
+    exp3_b2:'Menerjemahkan blueprint teknik ke dalam alur kerja pemesinan serta memverifikasi kode program G-code sebelum eksekusi.',
+    exp3_b3:'Melakukan zeroing benda kerja, kalibrasi offset pahat, dan pemeliharaan alat potong guna menjamin presisi berkelanjutan.',
+    exp3_b4:'Melakukan inspeksi visual dan metrologi dimensi berkala guna menjamin produk akhir bebas cacat produksi.',
+    label_skills:'Kompetensi Utama',
+    sg_backend:'Backend & Database', sg_frontend:'Frontend & DevOps',
+    sg_iot:'Sistem Tertanam & IoT', sg_mech:'Manufaktur & Mekanikal', sg_soft:'Praktik Profesional',
+    sk_ps:'Analisis Masalah Sistemik', sk_tc:'Kolaborasi Lintas Tim', sk_comm:'Komunikasi Teknis', sk_doc:'Dokumentasi Arsitektur',
+    label_projects:'Karya Pilihan', title_projects:'Proyek Unggulan',
+    label_certs:'Kredensial Terverifikasi', title_certs:'Sertifikasi & Lisensi',
+    label_contact:'Kontak Profesional', title_contact:'Mari Terhubung',
+    proj_simpl_desc:'Sistem informasi manajemen komunitas terstruktur dengan gamifikasi poin, alur persetujuan multi-level (RBAC), dan pipeline notifikasi terpadu. Terdaftar Hak Cipta resmi (HKI No. 001388006).',
+    proj_iot_desc:'Perangkat otomasi penjemuran responsif cuaca berbasis ESP32, sensor telemetri cahaya/hujan, serta antarmuka bot Telegram dua arah untuk monitoring dan kontrol manual jarak jauh.',
+    proj_conexpr_desc:'Platform manajemen kontrol dokumen teknik dengan mesin alur kerja persetujuan multi-level, pencarian indeks cepat, dan pencatatan audit log berstandar ISO.',
+    proj_electra_desc:'Platform billing utilitas dengan kalkulasi konsumsi otomatis, alur verifikasi transaksi bertingkat, serta generator laporan neraca bulanan dalam format PDF.',
+    certs_empty:'Daftar sertifikasi akan muncul setelah data diisi.',
     certs_fmt:'Format: {issuer, name, date, image, credential}'
   }
 };
 
 /* ═══════════ PROJECTS DATA ═══════════ */
 const PROJECTS = [
-  { cat:'web', title:'SIM PLC', descKey:'proj_simpl_desc', stack:['CodeIgniter 4','PHP 8.1','MySQL','Tailwind CSS'], image:'assets/projects/Simplc.png', github:'#', demo:'https://plcui.com/' },
-  { cat:'web', title:'ConexPro', descKey:'proj_conexpr_desc', stack:['Laravel 11','PHP 8.2','MySQL','Tailwind CSS'], image:'assets/projects/Aconex.png', github:'https://github.com/thomasfebryc/ConexPro', demo:'#' },
-  { cat:'web', title:'Electra', descKey:'proj_electra_desc', stack:['Laravel 9','PHP 8.1','MySQL','Blade'], image:'assets/projects/Electra.png', github:'https://github.com/thomasfebryc/eLECTRA', demo:'#' }
+  {
+    cat: 'web',
+    title: 'SIM PLC',
+    descKey: 'proj_simpl_desc',
+    stack: ['CodeIgniter 4','PHP 8.1','MySQL','Tailwind CSS'],
+    image: 'assets/projects/Simplc.png',
+    github: '#',
+    demo: 'https://plcui.com/',
+    hki: 'docs/Surat_Pencatatan_Ciptaan_HKI.pdf',
+    hkiNo: '001388006'
+  },
+  {
+    cat: 'iot',
+    title: 'Smart Drying Automation System',
+    descKey: 'proj_iot_desc',
+    stack: ['ESP32', 'C++', 'Telegram API', 'Rain/LDR Sensors', 'Servo'],
+    image: 'assets/projects/IoT_Drying.png',
+    github: 'https://github.com/thomasfebryc/Smart-Drying-Automation-System',
+    demo: '#'
+  },
+  { 
+    cat:'web', 
+    title:'ConexPro System', 
+    descKey:'proj_conexpr_desc', 
+    stack:['Laravel 11','PHP 8.2','MySQL','Tailwind CSS'], 
+    image:'assets/projects/Aconex.png', 
+    github:'https://github.com/thomasfebryc/ConexPro', 
+    demo:'#' 
+  },
+  { 
+    cat:'web', 
+    title:'Electra Billing App', 
+    descKey:'proj_electra_desc', 
+    stack:['Laravel 9','PHP 8.1','MySQL','Blade'], 
+    image:'assets/projects/Electra.png', 
+    github:'https://github.com/thomasfebryc/eLECTRA', 
+    demo:'#' 
+  }
 ];
+
 const CERTS = [
   { issuer:'BNSP · LSP Universitas Bina Sarana Informatika', name:'Analis Program (Program Analyst)', date:'15 September 2025', credential:'assets/certs/Analis_Program.pdf' },
+  { issuer:'Lembaga Bahasa UBSI · Akreditasi Unggul', name:'TOEFL Prediction Test · Score 643 (C1 Advanced)', date:'28 August 2026', credential:'docs/Sertifikat_TOEFL_Thomas_Febry_Cahyono.pdf' },
   { issuer:'Cisco Networking Academy', name:'Introduction to Cybersecurity', date:'29 May 2026', credential:'assets/certs/Certificate_Cybersecurity.pdf' },
   { issuer:'Cisco Networking Academy · Python Institute', name:'Python Essentials 2', date:'15 June 2026', credential:'assets/certs/Python_Essentials_certificate.pdf' }
 ];
@@ -702,7 +793,9 @@ function applyLang(lang) {
   document.getElementById('lang-toggle').textContent = lang === 'en' ? 'ID' : 'EN';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (I18N[lang][key] !== undefined) el.innerHTML = I18N[lang][key];
+    if (I18N[lang] && I18N[lang][key] !== undefined) {
+      el.innerHTML = I18N[lang][key];
+    }
   });
   renderProjects();
   renderCerts();
@@ -714,20 +807,23 @@ function renderProjects() {
   if (!grid) return;
   grid.innerHTML = '';
   PROJECTS.forEach((p, i) => {
-    const catLabel = p.cat === 'iot' ? 'IoT' : p.cat === 'mobile' ? 'Mobile' : 'Web';
+    const catLabel = p.cat === 'iot' ? 'IoT System' : p.cat === 'mobile' ? 'Mobile App' : 'Web App';
     const hasGithub = p.github && p.github !== '#';
     const hasDemo = p.demo && p.demo !== '#';
-    const desc = I18N[currentLang][p.descKey] || '';
+    const hasHki = p.hki && p.hki !== '#';
+    const desc = (I18N[currentLang] && I18N[currentLang][p.descKey]) ? I18N[currentLang][p.descKey] : '';
+    const hkiLabel = currentLang === 'en' ? 'Registered Copyright (HKI)' : 'Hak Cipta Terdaftar (HKI)';
     const card = document.createElement('div');
-    card.className = 'project-card reveal reveal-delay-' + (i+1);
+    card.className = 'project-card reveal reveal-delay-' + (i % 4 + 1);
     card.innerHTML = `
       <div class="project-thumb">
         <img src="${p.image}" alt="${p.title}" loading="lazy"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
         <div class="project-thumb-placeholder" style="display:none;">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <p>Screenshot unavailable</p>
+          <p>Preview in Progress</p>
         </div>
+        ${hasHki ? `<a href="${p.hki}" target="_blank" class="project-hki-badge" title="${hkiLabel} No. ${p.hkiNo} (Kemenkumham RI)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>HKI ${p.hkiNo}</span></a>` : ''}
         <span class="project-cat-badge ${p.cat}">${catLabel}</span>
       </div>
       <div class="project-body">
@@ -736,8 +832,9 @@ function renderProjects() {
         <div class="project-footer">
           <div class="project-stack">${p.stack.map(t=>`<span class="stack-tag">${t}</span>`).join('')}</div>
           <div class="project-links">
-            ${hasGithub?`<a href="${p.github}" target="_blank" class="project-link" title="GitHub"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg></a>`:''}
-            ${hasDemo?`<a href="${p.demo}" target="_blank" class="project-link" title="Live Demo"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>`:''}
+            ${hasHki ? `<a href="${p.hki}" target="_blank" class="project-link" title="${hkiLabel} (Kemenkumham RI)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></a>` : ''}
+            ${hasGithub ? `<a href="${p.github}" target="_blank" class="project-link" title="GitHub Repository"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg></a>` : ''}
+            ${hasDemo ? `<a href="${p.demo}" target="_blank" class="project-link" title="Live Demonstration"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>` : ''}
           </div>
         </div>
       </div>`;
@@ -751,7 +848,7 @@ function renderCerts() {
   const container = document.getElementById('certs-container');
   if (!container) return;
   if (CERTS.length === 0) {
-    container.innerHTML = `<div class="certs-empty"><p>${I18N[currentLang].certs_empty}</p><p style="margin-top:8px;font-size:11px;opacity:.6">${I18N[currentLang].certs_fmt}</p></div>`;
+    container.innerHTML = `<div class="certs-empty"><p>${I18N[currentLang].certs_empty}</p></div>`;
     return;
   }
   const row = document.createElement('div');
@@ -759,8 +856,19 @@ function renderCerts() {
   CERTS.forEach(c => {
     const card = document.createElement('div');
     card.className = 'cert-card';
-    if (c.credential) { card.style.cursor='pointer'; card.onclick=()=>window.open(c.credential,'_blank'); }
-    card.innerHTML = `<div class="cert-thumb">${c.image?`<img src="${c.image}" alt="${c.name}" loading="lazy"/>`:'<span class="cert-thumb-icon">🎓</span>'}</div><div class="cert-body"><div class="cert-issuer">${c.issuer}</div><div class="cert-name">${c.name}</div><div class="cert-date">${c.date}</div></div>`;
+    if (c.credential) { 
+      card.style.cursor = 'pointer'; 
+      card.onclick = () => window.open(c.credential, '_blank'); 
+    }
+    card.innerHTML = `
+      <div class="cert-thumb">
+        ${c.image ? `<img src="${c.image}" alt="${c.name}" loading="lazy"/>` : '<span class="cert-thumb-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>'}
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer">${c.issuer}</div>
+        <div class="cert-name">${c.name}</div>
+        <div class="cert-date">${c.date}</div>
+      </div>`;
     row.appendChild(card);
   });
   container.innerHTML = '';
@@ -770,13 +878,18 @@ function renderCerts() {
 /* ═══════════ SCROLL REVEAL ═══════════ */
 function initReveal() {
   const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+    entries.forEach(e => { 
+      if (e.isIntersecting) { 
+        e.target.classList.add('visible'); 
+        obs.unobserve(e.target); 
+      } 
+    });
+  }, { threshold: 0.1 });
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
 }
 
 /* ═══════════ TYPEWRITER ═══════════ */
-const roles = ['Software Engineer', 'IoT Developer', 'Web Developer', 'Problem Solver'];
+const roles = ['Software Engineer', 'Full-Stack Web Developer', 'IoT Specialist', 'Backend Architect'];
 let roleIdx = 0, charIdx = 0, deleting = false;
 function typeWriter() {
   const el = document.getElementById('typewriter');
@@ -784,62 +897,75 @@ function typeWriter() {
   const current = roles[roleIdx];
   if (!deleting) {
     el.textContent = current.slice(0, ++charIdx);
-    if (charIdx === current.length) { deleting = true; setTimeout(typeWriter, 1800); return; }
+    if (charIdx === current.length) { 
+      deleting = true; 
+      setTimeout(typeWriter, 1800); 
+      return; 
+    }
   } else {
     el.textContent = current.slice(0, --charIdx);
-    if (charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; }
+    if (charIdx === 0) { 
+      deleting = false; 
+      roleIdx = (roleIdx + 1) % roles.length; 
+    }
   }
-  setTimeout(typeWriter, deleting ? 55 : 90);
+  setTimeout(typeWriter, deleting ? 50 : 85);
 }
 
 /* ═══════════ SCROLL PROGRESS ═══════════ */
 function updateProgress() {
-  const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = total > 0 ? (window.scrollY / total) : 0;
   document.getElementById('scroll-progress').style.transform = `scaleX(${pct})`;
 }
 
 /* ═══════════ ANIMATED BACKGROUND ═══════════ */
 function initCanvas() {
   const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
   let W, H, particles = [];
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   resize();
   window.addEventListener('resize', resize);
-  for (let i = 0; i < 55; i++) {
-    particles.push({ x:Math.random()*window.innerWidth, y:Math.random()*window.innerHeight,
-      vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35,
-      r:Math.random()*1.8+.5, a:Math.random() });
+  for (let i = 0; i < 50; i++) {
+    particles.push({ 
+      x: Math.random() * window.innerWidth, 
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - .5) * .35, 
+      vy: (Math.random() - .5) * .35,
+      r: Math.random() * 1.8 + .5, 
+      a: Math.random() 
+    });
   }
   function draw() {
-    ctx.clearRect(0,0,W,H);
+    ctx.clearRect(0, 0, W, H);
     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-
-    // Warna & opacity disesuaikan per tema agar kontras terhadap background tetap setara
-    const dotColor         = isDark ? '76,110,245' : '47,76,191';   // lebih gelap & saturated di light mode
-    const lineColor        = isDark ? '76,110,245' : '47,76,191';
-    const dotOpacityMult   = isDark ? 0.6  : 0.85;                  // naikkan opacity titik di light mode
-    const lineOpacityMult  = isDark ? 0.12 : 0.22;                  // naikkan opacity garis di light mode
+    const dotColor = isDark ? '94, 114, 228' : '75, 99, 222';
+    const lineColor = isDark ? '94, 114, 228' : '75, 99, 222';
+    const dotOpacityMult = isDark ? 0.65 : 0.85;
+    const lineOpacityMult = isDark ? 0.15 : 0.22;
 
     particles.forEach(p => {
       p.x += p.vx; p.y += p.vy;
-      if (p.x<0) p.x=W; if (p.x>W) p.x=0;
-      if (p.y<0) p.y=H; if (p.y>H) p.y=0;
+      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
       ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(${dotColor},${p.a*dotOpacityMult})`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${dotColor},${p.a * dotOpacityMult})`;
       ctx.fill();
     });
-    for (let i=0;i<particles.length;i++) {
-      for (let j=i+1;j<particles.length;j++) {
-        const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
-        const dist=Math.sqrt(dx*dx+dy*dy);
-        if (dist<130) {
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 130) {
           ctx.beginPath();
-          ctx.moveTo(particles[i].x,particles[i].y);
-          ctx.lineTo(particles[j].x,particles[j].y);
-          ctx.strokeStyle=`rgba(${lineColor},${(1-dist/130)*lineOpacityMult})`;
-          ctx.lineWidth=.6;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(${lineColor},${(1 - dist / 130) * lineOpacityMult})`;
+          ctx.lineWidth = .6;
           ctx.stroke();
         }
       }
@@ -849,11 +975,15 @@ function initCanvas() {
   draw();
 }
 
-/* ═══════════ INIT ═══════════ */
+/* ═══════════ INITIALIZATION ═══════════ */
 document.addEventListener('DOMContentLoaded', () => {
   const html = document.documentElement;
 
-  // Theme
+  // Set Dynamic Current Year
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Theme Initializer
   const savedTheme = localStorage.getItem('theme') || 'dark';
   html.setAttribute('data-theme', savedTheme);
   document.getElementById('theme-toggle').addEventListener('click', () => {
@@ -862,37 +992,38 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', next);
   });
 
-  // Lang
+  // Language Initializer
   applyLang(currentLang);
   document.getElementById('lang-toggle').addEventListener('click', () => {
     applyLang(currentLang === 'en' ? 'id' : 'en');
   });
 
-  // Hamburger
+  // Mobile Navigation
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
   hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
-  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobileNav.classList.remove('open'));
+  });
 
-  // Scroll
+  // Scroll Progress
   window.addEventListener('scroll', () => { updateProgress(); }, { passive: true });
 
-  // Smooth scroll
+  // Smooth Anchoring
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      e.preventDefault();
-      const t = document.querySelector(a.getAttribute('href'));
-      if (t) t.scrollIntoView({ behavior:'smooth', block:'start' });
+      const targetId = a.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        e.preventDefault();
+        const t = document.querySelector(targetId);
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 
-  // Reveal
+  // Scroll Animations & Canvas
   initReveal();
-
-  // Typewriter
-  setTimeout(typeWriter, 800);
-
-  // Canvas bg
+  setTimeout(typeWriter, 600);
   initCanvas();
 });
 </script>
